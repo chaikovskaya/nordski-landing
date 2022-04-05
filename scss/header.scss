@@ -40,136 +40,6 @@
     }
 }
 
-.main {
-    position: relative;
-    height: 766px;
-    margin-bottom: 90px;
-    background: linear-gradient(90deg, #1F4466 50%, #c6c6c6 50%);
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        z-index: 1;
-        width: 1155px;
-        margin-left: -960px;
-        height: 100%;
-        background: linear-gradient(90deg, #1F4466 0%, rgba(0, 0, 0, 0) 100%);
-    }
-    &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        z-index: 1;
-        width: 200px;
-        margin-left: 760px;
-        height: 100%;
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #c6c6c6 100%);
-    }
-    &-banner-img {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        max-width: none;
-    }
-    &-container {
-        height: 100%;
-    }
-    &-info {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        height: 100%;
-        padding-top: 115px;
-        padding-bottom: 70px;
-        color: #fff;
-        a {
-            color: #fff;
-        }
-    }
-    &-info-top {
-        margin-bottom: 50px;
-    }
-    &-info-1 {
-        margin-bottom: 6px;
-        font-weight: 300;
-        font-size: 36px;
-        line-height: 38px;
-    }
-    &-info-2 {
-        margin-bottom: 16px;
-        font-weight: 900;
-        font-size: 60px;
-        line-height: 70px;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-    }
-    &-info-3 {
-        margin-bottom: 46px;
-        font-weight: 300;
-        font-size: 25px;
-        line-height: 29px;
-    }
-    &-info-contacts {
-        margin-top: auto;
-    }
-    &-info-contacts-links {
-        margin-bottom: 29px;
-    }
-    &-phone {
-        margin-right: 19px;
-        font-weight: 900;
-        font-size: 28px;
-        line-height: 34px;
-        letter-spacing: 0.095em;
-        text-transform: uppercase;
-        text-decoration: none;
-        vertical-align: middle;
-    }
-    &-callback {
-        display: inline-block;
-        font-weight: 300;
-        font-size: 20px;
-        line-height: 18px;
-        text-decoration: none;
-        border-bottom: 1px solid #fff;
-        vertical-align: middle;
-        &:hover {
-            border-bottom-color: transparent;
-        }
-    }
-}
-
-.socials {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    &-item {
-        margin-right: 22px;
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-    &-link {
-        text-decoration: none;
-    }
-    &-icon {
-    }
-    &-icon_active {
-        display: none;
-    }
-    &-link:hover &-icon {
-        display: none;
-    }
-    &-link:hover &-icon_active {
-        display: inline-block;
-    }
-}
-
 /* IE 11 */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 }
@@ -182,13 +52,6 @@ and (max-width: $desktop) {
             margin-right: 58px;
         }
     }
-    .main {
-        &:before {
-            left: 0;
-            width: 800px;
-            margin-left: 0;
-        }
-    }
 }
 
 @media screen
@@ -196,11 +59,6 @@ and (max-width: $notebook) {
     .main-menu {
         &-item {
             margin-right: 17px;
-        }
-    }
-    .main {
-        &-banner-img {
-            margin-left: -59px;
         }
     }
 }
@@ -216,14 +74,6 @@ and (max-width: $tablet){
     .main-menu {
         &-item {
             margin-right: 43px;
-        }
-    }
-    .main {
-        &-banner-img {
-            margin-left: 38px;
-        }
-        &-info {
-            width: 62%;
         }
     }
 }
@@ -251,40 +101,6 @@ and (max-width: $mobile){
                 margin-bottom: 0;
             }
         }
-    }
-    .main {
-        margin-bottom: 45px;
-        &:before {
-            background: rgba(13, 37, 60, 0.85);
-        }
-        &-banner-img {
-            margin-left: -283px;
-        }
-        &-info {
-            width: 100%;
-            padding-top: 167px;
-            text-align: center;
-        }
-        &-info-3 {
-            margin-bottom: 32px;
-        }
-        &-info-contacts-links {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 34px;
-        }
-        &-callback {
-            font-size: 25px;
-            line-height: 21px;
-        }
-        &-phone {
-            margin-right: 0;
-            margin-bottom: 10px;
-        }
-    }
-    .socials {
-        justify-content: center;
     }
 }
 
