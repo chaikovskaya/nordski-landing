@@ -1,5 +1,82 @@
 
 .footer {
+    background-color: #293C4E;
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 48px;
+        padding-bottom: 35px;
+    }
+    &-company {
+        width: 30%;
+    }
+    &-logo {
+        width: 196px;
+        height: 29px;
+        margin-bottom: 13px;
+    }
+    &-company-info {
+        margin-bottom: 25px;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.03em;
+        color: #3C9FFA;
+        a {
+            color: #3C9FFA;
+        }
+    }
+    &-copyright {
+        width: 30%;
+        text-align: right;
+    }
+    &-phone {
+        margin-bottom: 5px;
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: 0.095em;
+        text-transform: uppercase;
+        text-decoration: none;
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+    &-callback {
+        display: inline-block;
+        margin-bottom: 17px;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 18px;
+        text-decoration: none;
+        border-bottom: 1px solid #fff;
+        color: #fff;
+        &:hover {
+            border-bottom-color: transparent;
+            color: #fff;
+        }
+    }
+    &-socials {
+        margin-bottom: 15px;
+        .socials {
+            justify-content: flex-end;
+        }
+    }
+    &-address {
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.03em;
+        color: #3C9FFA;
+        a {
+            color: #3C9FFA;
+        }
+    }
+    &-confidentially {
+        color: #3C9FFA;
+        a {
+            color: #3C9FFA;
+        }
+    }
 }
 
 @media screen
@@ -8,8 +85,43 @@ and (max-width: $desktop){
 
 @media screen
 and (max-width: $tablet){
+    .footer {
+        &-company {
+            width: 45%;
+        }
+        &-copyright {
+            width: 45%;
+        }
+    }
 }
 
 @media screen
 and (max-width: $mobile){
+    .footer {
+        &-container {
+            flex-direction: column;
+        }
+        &-company {
+            order: 1;
+            width: 100%;
+            text-align: center;
+        }
+        &-copyright {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 59px;
+        }
+        &-phone {
+            margin-bottom: 16px;
+        }
+        &-callback {
+            margin-bottom: 26px;
+        }
+        &-socials {
+            margin-bottom: 7px;
+        }
+        &-socials .socials {
+            justify-content: center;
+        }
+    }
 }

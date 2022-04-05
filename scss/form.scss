@@ -179,24 +179,34 @@ label.form-error {
 }
 
 .button {
+    position: relative;
     display: inline-block;
-    height: 50px;
-    line-height: 50px;
-    padding-right: 33px;
-    padding-left: 33px;
-    font-weight: 600;
-    font-size: 15px;
+    height: 54px;
+    line-height: 54px;
+    padding-right: 27px;
+    padding-left: 27px;
+    font-size: 16px;
     text-align: center;
     color: #fff;
     text-transform: uppercase;
-    background-color: #59A750;
     text-decoration: none;
     white-space: nowrap;
     border-width: 0;
     cursor: pointer;
-    border-radius: 25px;
-    box-shadow: 0px 8.14815px 6.51852px rgba(49, 49, 49, 0.0392593), 0px 1.85185px 3.14815px rgba(49, 49, 49, 0.0240741);
+    letter-spacing: 0.095em;
     -webkit-appearance: none;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: #3C9FFA;
+        border-radius: 8px;
+        transform: skew(159deg);
+    }
     &:hover {
         color: #fff;
     }
@@ -207,17 +217,8 @@ label.form-error {
         opacity: 0.8;
         cursor: not-allowed;
     }
-
-    &_simple {
-        background-color: #FF5800;
-    }
-    &_disabled {
-        background-color: #BDBDBD;
-        box-shadow: none;
-    }
-    &_modified {
-        height: 43px;
-        line-height: 43px;
+    &:hover:after {
+        background-color: #FF6B00;
     }
 }
 
