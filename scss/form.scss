@@ -174,10 +174,6 @@ label.form-error {
     }
 }
 
-@mixin bgrcolor() {
-    transition: background-color 0.3s ease-in-out;
-}
-
 .button {
     position: relative;
     display: inline-block;
@@ -206,6 +202,7 @@ label.form-error {
         background-color: #3C9FFA;
         border-radius: 8px;
         transform: skew(159deg);
+        @include bgrcolor();
     }
     &:hover {
         color: #fff;

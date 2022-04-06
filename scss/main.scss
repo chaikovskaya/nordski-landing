@@ -6,7 +6,7 @@
 .main {
     position: relative;
     height: 766px;
-    margin-bottom: 90px;
+    margin-bottom: 81px;
     background: linear-gradient(90deg, #1F4466 50%, #c6c6c6 50%);
     &:before {
         content: '';
@@ -138,22 +138,36 @@
 }
 
 .advantages {
-    margin-bottom: 130px;
+    margin-bottom: 110px;
     &-item {
         text-align: center;
+        margin-bottom: 20px;
     }
     &-number {
+        position: relative;
         display: block;
-        margin-bottom: 20px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
         font-size: 70px;
         font-weight: 900;
         line-height: 82px;
         letter-spacing: 0.05em;
-        text-transform: uppercase;
         color: #004161;
         white-space: nowrap;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 56px;
+            height: 6px;
+            background-color: #3C9FFA;
+        }
     }
     &-detail {
+        display: block;
+        min-height: 72px;
         font-weight: 300;
         font-size: 30px;
         line-height: 32px;
@@ -175,6 +189,12 @@ and (max-width: $desktop){
             margin-left: 0;
         }
     }
+    .advantages {
+        &-detail {
+            font-size: 25px;
+            line-height: 27px;
+        }
+    }
 }
 
 @media screen
@@ -186,38 +206,12 @@ and (max-width: $notebook){
     }
     .advantages {
         &-number {
-            position: relative;
-            &:after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 56px;
-                height: 6px;
-                background-color: #3C9FFA;
-            }
-        }
-        &-detail {
-            font-size: 25px;
-            line-height: 27px;
-        }
-    }
-}
-
-@media screen
-and (max-width: $tablet){
-    .main {
-        &-banner-img {
-            margin-left: 38px;
-        }
-        &-info {
-            width: 62%;
-        }
-    }
-    .advantages {
-        &-number {
+            padding-bottom: 21px;
             font-size: 60px;
+            line-height: 70px;
+        }
+        &-currency {
+            font-size: 59px;
         }
         &-detail {
             font-size: 22px;
@@ -227,13 +221,29 @@ and (max-width: $tablet){
 }
 
 @media screen
+and (max-width: $tablet){
+    .main {
+        margin-bottom: 75px;
+        &-banner-img {
+            margin-left: 38px;
+        }
+        &-info {
+            width: 62%;
+        }
+    }
+    .advantages {
+        margin-bottom: 44px;
+    }
+}
+
+@media screen
 and (max-width: $mobile){
     .main-content-menu {
         display: block;
-        margin-bottom: 85px;
+        margin-bottom: 77px;
     }
     .main {
-        margin-bottom: 45px;
+        margin-bottom: 42px;
         &:before {
             background: rgba(13, 37, 60, 0.85);
         }
@@ -265,5 +275,185 @@ and (max-width: $mobile){
     }
     .socials {
         justify-content: center;
+    }
+    .advantages {
+        margin-bottom: 0;
+    }
+}
+
+
+.category {
+    margin-bottom: 150px;
+    &-link {
+        display: block;
+        text-decoration: none;
+        padding: 20px;
+        &:hover {
+            background-color: #fff;
+            box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.25);
+        }
+    }
+    &-img {
+        display: block;
+        width: 100%;
+        margin-bottom: 19px;
+    }
+    &-name {
+        display: block;
+        text-align: center;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 32px;
+        color: #1F4466;
+    }
+    &-slider {
+        overflow: visible;
+        margin-left: -260px;
+        margin-right: -260px;
+    }
+    &-list {
+    }
+}
+
+.block {
+    padding-top: 60px;
+    padding-bottom: 84px;
+    background-color: #293C4E;
+    .title {
+        color: #fff;
+    }
+}
+
+.sport {
+    margin-bottom: 80px;
+    &-slider {
+        position: relative;
+        overflow: visible;
+    }
+    &-list {}
+    &-item {
+        background-color: #293C4E;
+    }
+    &-block {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        margin-bottom: 25px;
+        background-color: #3C9FFA;
+    }
+    &-block-item {
+        overflow: hidden;
+        &:nth-child(1) {
+            margin-right: -15%;
+            clip-path: polygon(0 0, 100% 0, 74.5% 100%, 0% 100%);
+        }
+        &:nth-child(2) {
+            clip-path: polygon(27% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+    }
+    &-img {
+        display: block;
+        width: 100%;
+    }
+    &-panel {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 118px;
+    }
+    &-name {
+        font-size: 30px;
+        line-height: 35px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    &-rating {
+        margin-right: 82px;
+    }
+    &-button {
+        margin-top: -30px;
+    }
+    &-pagination {
+        bottom: 7px!important;
+    }
+    &-nav {}
+}
+
+.today {
+    margin-bottom: 66px;
+}
+
+
+@media screen
+and (max-width: $desktop){
+    .category {
+        &-slider {
+            margin-left: -30px;
+            margin-right: 68px;
+        }
+    }
+    .block {
+        padding-bottom: 77px;
+    }
+    .sport {
+        &-slider {
+            margin-left: 95px;
+            margin-right: 95px;
+        }
+    }
+}
+
+@media screen
+and (max-width: $notebook){
+    .category {
+        &-slider {
+            margin-right: 88px;
+        }
+    }
+    .block {
+        padding-bottom: 23px;
+    }
+    .sport {
+        &-slider {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        &-button {
+            margin-top: 0;
+        }
+    }
+}
+
+@media screen
+and (max-width: $tablet){
+    .category {
+        margin-bottom: 65px;
+    }
+}
+
+@media screen
+and (max-width: $mobile){
+    .category {
+        margin-bottom: 42px;
+        &-slider {
+            margin-left: 0;
+            margin-right: 24px;
+        }
+    }
+    .sport {
+        &-panel {
+            margin-left: $gutter;
+            margin-right: $gutter;
+            justify-content: center;
+        }
+        &-slider {
+            margin-left: -$gutter;
+            margin-right: -$gutter;
+        }
+    }
+    .block {
+        padding-top: 58px;
+        padding-bottom: 31px;
+        background-color: #293C4E;
     }
 }
