@@ -192,6 +192,7 @@ label.form-error {
     letter-spacing: 0.095em;
     -webkit-appearance: none;
     &:after {
+        @include bgrcolor();
         content: '';
         position: absolute;
         top: 0;
@@ -202,7 +203,6 @@ label.form-error {
         background-color: #3C9FFA;
         border-radius: 8px;
         transform: skew(159deg);
-        @include bgrcolor();
     }
     &:hover {
         color: #fff;

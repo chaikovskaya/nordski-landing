@@ -72,6 +72,7 @@
         }
     }
     &-confidentially {
+        font-size: 14px;
         color: #3C9FFA;
         a {
             color: #3C9FFA;
@@ -81,10 +82,6 @@
 
 @media screen
 and (max-width: $desktop){
-}
-
-@media screen
-and (max-width: $tablet){
     .footer {
         &-company {
             width: 45%;
@@ -93,6 +90,10 @@ and (max-width: $tablet){
             width: 45%;
         }
     }
+}
+
+@media screen
+and (max-width: $tablet){
 }
 
 @media screen
