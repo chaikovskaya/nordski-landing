@@ -82,6 +82,104 @@ function initMask() {
         "showMaskOnHover": false,
     });
 }
+function initPopup() {
+    $(".js-popup").fancybox({
+        toolbar  : false,
+        smallBtn : true,
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
+                '<i class="fancybox-close-icon icon icon_close"></i>' +
+                "</button>",
+        },
+        arrows: false,
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+            },
+        },
+        beforeClose: function (instance) {
+        },
+        afterLoad: function(instance, current) {
+            if ( instance.group.length > 1 && current.$content ) {
+                current.$content.append('' +
+                    '<div class="fancybox-nav-block">' +
+                    '<button class="fancybox-button fancybox-button--arrow_left prev" data-fancybox-prev>' +
+                    '<i class="fancybox-button-icon fancybox-button-icon_left"><i class="icon icon_arrow-left"></i></i>' +
+                    '</button>' +
+                    '<button class="fancybox-button fancybox-button--arrow_right next" data-fancybox-next>' +
+                    '<i class="fancybox-button-icon fancybox-button-icon_right"><i class="icon icon_arrow-right"></i></i>' +
+                    '</button>' +
+                    '</div>'
+                );
+            }
+        }
+    });
+}
+
+function openPopupCallback($element) {
+    if (typeof($element) == 'undefined') {
+        $element = $('.js-popup-callback');
+    }
+
+    $.fancybox.open({
+        src  : $element.data('src'),
+        type : 'ajax',
+        toolbar  : false,
+        smallBtn : true,
+        afterShow: function (data) {
+            initValidate(data.$refs.container.find('.js-form-validate'));
+            initMask();
+        },
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-close fancybox-close_inner" title="{{CLOSE}}">' +
+                '<i class="fancybox-close-icon icon icon_close"></i>' +
+                "</button>",
+        },
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+            },
+        }
+    });
+}
+
+function initPopupCallback() {
+    $(".js-open-callback").on('click', function() {
+        $.fancybox.close();
+        openPopupCallback($(".js-open-callback"));
+    });
+}
+
+function openPopupSuccess(url) {
+    if (typeof(url) == 'undefined') {
+        url = '/';
+    }
+
+    $.fancybox.open({
+        src  : url,
+        type : 'ajax',
+        toolbar  : false,
+        smallBtn : true,
+        afterShow: function (data) {
+        },
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-close fancybox-close_inner" title="{{CLOSE}}">' +
+                '<i class="fancybox-close-icon icon icon_close"></i>' +
+                "</button>",
+        },
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+            },
+        }
+    });
+}
 
 var sliderCategory;
 function initSliderCategory() {
@@ -101,22 +199,22 @@ function initSliderCategory() {
                     slidesPerView: 1,
                     simulateTouch: false,
                 },
-                564: {
-                    slidesPerView: 2,
-                    simulateTouch: false,
-                    loop: sliderLength > 2 ? true : false,
-                },
                 744: {
                     slidesPerView: 2,
                     simulateTouch: false,
                     loop: sliderLength > 2 ? true : false,
                 },
                 984: {
+                    slidesPerView: 2,
+                    simulateTouch: false,
+                    loop: sliderLength > 2 ? true : false,
+                },
+                1164: {
                     slidesPerView: 3,
                     simulateTouch: false,
                     loop: sliderLength > 3 ? true : false,
                 },
-                1164: {
+                1344: {
                     slidesPerView: 5,
                     loop: sliderLength > 5 ? true : false,
                 },
@@ -160,9 +258,6 @@ function initSliderSport() {
                     slidesPerView: 1,
                     simulateTouch: false,
                 },
-                564: {
-                    simulateTouch: false,
-                },
                 744: {
                     simulateTouch: false,
                 },
@@ -170,6 +265,9 @@ function initSliderSport() {
                     simulateTouch: false,
                 },
                 1164: {
+                    simulateTouch: false,
+                },
+                1344: {
                 },
             },
             on: {
@@ -181,6 +279,69 @@ function initSliderSport() {
                 },
             },
         });
+    });
+}
+
+var sliderClients;
+function initSliderClients() {
+    jQuery('.js-slider-clients').each(function() {
+        var $slider = $(this),
+            sliderLength = $slider.find('.swiper-slide').length;
+
+        var isStart = sliderLength > 1 ? true : false;
+
+        sliderClients = new Swiper($slider[0], {
+            loop: isStart,
+            pagination: false,
+            navigation: false,
+            spaceBetween: 24,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    simulateTouch: false,
+                },
+                744: {
+                    slidesPerView: 2,
+                    simulateTouch: false,
+                    loop: sliderLength > 2 ? true : false,
+                },
+                984: {
+                    slidesPerView: 3,
+                    simulateTouch: false,
+                    loop: sliderLength > 3 ? true : false,
+                },
+                1164: {
+                    slidesPerView: 3,
+                    simulateTouch: false,
+                    loop: sliderLength > 3 ? true : false,
+                },
+                1344: {
+                    slidesPerView: 5,
+                    loop: sliderLength > 5 ? true : false,
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                },
+            },
+        });
+    });
+}
+
+function initTab() {
+    if (typeof(Tab) === 'undefined' || !jQuery.isFunction(Tab)) {
+        return false;
+    }
+
+    var common = {};
+
+    jQuery('.JS-Tab').not('.JS-Tab-ready').each(function() {
+        var local = GLOBAL.parseData(jQuery(this).data('tab'));
+        new Tab(this, jQuery.extend({}, common, local));
     });
 }
 
@@ -223,6 +384,10 @@ $(document).ready(function () {
     initValidate();
     initMask();
     initScrollTop();
+    initPopup();
     initSliderCategory();
     initSliderSport();
+    initSliderClients();
+    initTab();
+    initPopupCallback();
 });

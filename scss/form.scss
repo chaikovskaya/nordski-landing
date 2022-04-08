@@ -2,37 +2,47 @@
 $colorPlaceholder: #828282;
 
 .field {
-    margin-bottom: 30px;
-    &-label {
-    }
-    &_simple {
-        margin-bottom: 40px;
-    }
+    margin-bottom: 52px;
 }
 
 .input {
     width: 100%;
     height: 50px;
     padding: 15px 32px;
-    background-color: #fff;
-    color: #828282;
-    font-size: 15px;
-    border: 1px solid #E0E0E0;
+    background-color: transparent;
+    color: #C2C2C2;
+    font-size: 20px;
+    border: 1px solid transparent;
+    border-bottom-color: #3C9FFA;
     font-family: 'Nunito', sans-serif;
-    border-radius: 15px;
+    text-align: center;
+    transition: border-color 0.3s linear;
     &:focus {
-        color: #828282;
+        color: #1F4466;
+        border-color: #3C9FFA;
     }
-    &::-webkit-input-placeholder {color: $colorPlaceholder;}
-    &:-moz-placeholder {color: $colorPlaceholder;}
-    &::-moz-placeholder {color: $colorPlaceholder;}
-    &:-ms-input-placeholder {color: $colorPlaceholder;}
-    &::placeholder {color: $colorPlaceholder;}
+    &::-webkit-input-placeholder {font-size: 20px; color: $colorPlaceholder;}
+    &:-moz-placeholder {font-size: 20px; color: $colorPlaceholder;}
+    &::-moz-placeholder {font-size: 20px; color: $colorPlaceholder;}
+    &:-ms-input-placeholder {font-size: 20px; color: $colorPlaceholder;}
+    &::placeholder {font-size: 20px; color: $colorPlaceholder;}
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus {
         -webkit-text-fill-color: $colorPlaceholder;
         transition: background-color 1s ease-in-out 0s;
+    }
+
+    &_simple {
+        color: #3C9FFA;
+        &::-webkit-input-placeholder {color: #3C9FFA;}
+        &:-moz-placeholder {color: #3C9FFA;}
+        &::-moz-placeholder {color: #3C9FFA;}
+        &:-ms-input-placeholder {color: #3C9FFA;}
+        &::placeholder {color: #3C9FFA;}
+        &:focus {
+            color: #3C9FFA;
+        }
     }
 
     &_textarea {
@@ -58,7 +68,6 @@ $colorPlaceholder: #828282;
 }
 
 input.form-error {
-    display: block;
     border-color: #d25a5f;
     &:focus {
         border-color: #d25a5f;
@@ -191,6 +200,8 @@ label.form-error {
     cursor: pointer;
     letter-spacing: 0.095em;
     -webkit-appearance: none;
+    background-color: transparent;
+    outline: none;
     &:after {
         @include bgrcolor();
         content: '';
@@ -216,6 +227,22 @@ label.form-error {
     }
     &:hover:after {
         background-color: #FF6B00;
+    }
+
+    &_simple {
+        @include bgrcolor();
+        height: 50px;
+        line-height: 49px;
+        text-transform: none;
+        background-color: #3C9FFA;
+        font-size: 18px;
+        letter-spacing: normal;
+        &:after {
+            display: none;
+        }
+        &:hover {
+            background-color: #FF6B00;
+        }
     }
 }
 

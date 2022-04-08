@@ -23,12 +23,14 @@
 
 .fancybox-close {
     position: absolute;
-    top: -20px;
+    top: -32px;
     right: 0;
     cursor: pointer;
     background-color: transparent;
-    color: #fff;
-    font-size: 12px;
+    &_inner {
+        top: 51px;
+        right: 57px;
+    }
 }
 .fancybox-close:hover {
 }
@@ -65,31 +67,41 @@
 .fancybox-button {
     padding: 0;
     vertical-align: middle;
+
 }
 
 .fancybox-button--arrow_right {
-    width: 63px;
+    width: 94px;
     height: 100%;
-    padding-right: 22px;
+    margin-right: -120px;
     background-color: transparent;
 }
 
 .fancybox-button--arrow_left {
-    width: 63px;
+    width: 94px;
     height: 100%;
-    padding-left: 22px;
+    margin-left: -120px;
     background-color: transparent;
 }
 
 .fancybox-button-icon {
-    display: block;
+    display: inline-block;
+    width: 94px;
+    height: 94px;
+    padding-top: 29px;
+    padding-bottom: 29px;
+    border-radius: 50%;
     transition: background-color 0.3s linear;
     &:hover {
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.1);
     }
     &_left { }
     &_right {
     }
+}
+
+.fancybox-button[disabled] {
+    visibility: hidden;
 }
 
 .fancybox-button[disabled] .fancybox-button-icon {
@@ -140,23 +152,65 @@
 }
 
 .popup {
-    width: 510px;
-    padding: 42px 30px 50px;
+    width: 636px;
+    padding: 52px 63px 53px;
+    background-color: #293C4E;
     &-title {
         display: block;
+        position: relative;
+        margin-bottom: 11px;
+        padding-left: 50px;
+        color: #fff;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 47px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 0;
+            width: 9px;
+            height: 73px;
+            background-color: #3C9FFA;
+            transform: skew(159deg);
+        }
+        span {
+            font-weight: 300;
+        }
+    }
+    &-info {
         margin-bottom: 40px;
-        text-align: center;
-        font-size: 25px;
+        margin-left: 50px;
+        max-width: 280px;
+        font-weight: 300;
+        font-size: 20px;
         line-height: 30px;
-        color: rgb( 29, 29, 29 );
-        font-weight: bold;
+        color: #FFFFFF;
+    }
+    &-actions {
+        margin-bottom: 31px;
     }
     &-button {
-        min-width: 160px;
-        padding-right: 24px;
-        padding-left: 24px;
-        font-size: 14px;
-        letter-spacing: 0.007em;
+        width: 100%;
+    }
+    &-text {
+        max-width: 370px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #9A9A9A;
+    }
+    &-box {
+        margin-top: 96px;
+        margin-bottom: 220px;
+    }
+    &-logo-wrapper {
+        text-align: right;
     }
 }
 
@@ -173,9 +227,30 @@
 
 
 @media screen
+and (max-width: $notebook){
+    .fancybox-button--arrow_right {
+        margin-right: 10px;
+    }
+
+    .fancybox-button--arrow_left {
+        margin-left: 10px;
+    }
+}
+
+@media screen
 and (max-width: $tablet){
 }
 
 @media screen
 and (max-width: $mobile){
+    .fancybox-close {
+        &_inner {
+            top: 30px;
+            right: 24px;
+        }
+    }
+    .popup {
+        width: 100%;
+        padding: 30px 24px 38px;
+    }
 }

@@ -50,14 +50,12 @@
                             <div class="main-info-1">Российский производитель</div>
                             <div class="main-info-2">спортивной одежды</div>
                             <div class="main-info-3">Прямые оптовые поставки<br /> со&nbsp;складов бренда</div>
-                            <a class="button" href="#">
-                                ПОЛУЧИТЬ УСЛОВИЯ СОТРУДНИЧЕСТВА
-                            </a>
+                            <a class="button" href="#">ПОЛУЧИТЬ УСЛОВИЯ СОТРУДНИЧЕСТВА</a>
                         </div>
                         <div class="main-info-contacts">
                             <div class="main-info-contacts-links">
                                 <a class="main-phone" href="tel:+78004441053">+7(800)444-10-53</a>
-                                <a class="main-callback" href="javascript:;">Заказать звонок</a>
+                                <a class="main-callback js-open-callback" href="javascript:;" data-src="./ajax/callback.html">Заказать звонок</a>
                             </div>
                             <ul class="socials">
                                 <li class="socials-item">
@@ -263,16 +261,24 @@
                     <div class="partners-info">Будем рады видеть вас в числе наших партнёров</div>
                     <ul class="partners-list">
                         <li class="partners-list-item partners-list-item_1">
-                            <img class="partners-img" src="./images/partners/partners-img-1.jpg" alt="" />
+                            <a class="partners-link js-popup" href="./images/partners/partners-img-1.jpg" data-fancybox="gallery">
+                                <img class="partners-img" src="./images/partners/partners-img-1.jpg" alt="" />
+                            </a>
                         </li>
                         <li class="partners-list-item partners-list-item_2">
-                            <img class="partners-img" src="./images/partners/partners-img-2.jpg" alt="" />
+                            <a class="partners-link js-popup" href="./images/partners/partners-img-2.jpg" data-fancybox="gallery">
+                                <img class="partners-img" src="./images/partners/partners-img-2.jpg" alt="" />
+                            </a>
                         </li>
                         <li class="partners-list-item partners-list-item_3">
-                            <img class="partners-img" src="./images/partners/partners-img-3.jpg" alt="" />
+                            <a class="partners-link js-popup" href="./images/partners/partners-img-3.jpg" data-fancybox="gallery">
+                                <img class="partners-img" src="./images/partners/partners-img-3.jpg" alt="" />
+                            </a>
                         </li>
                         <li class="partners-list-item partners-list-item_4">
-                            <img class="partners-img" src="./images/partners/partners-img-4.jpg" alt="" />
+                            <a class="partners-link js-popup" href="./images/partners/partners-img-4.jpg" data-fancybox="gallery">
+                                <img class="partners-img" src="./images/partners/partners-img-4.jpg" alt="" />
+                            </a>
                         </li>
                     </ul>
                 </section>
@@ -283,7 +289,7 @@
                     <h2 class="marketing-title title">Полная маркетинговая<br /> <span>поддержка партнёров</span></h2>
 
                     <ul class="marketing-list row">
-                        <li class="marketing-list-item marketing-list-item_promo col-md-4">
+                        <li class="marketing-list-item marketing-list-item_promo col-lg-4">
                             <a href="#" class="marketing-link">
                                 <span class="marketing-block">
                                     <img class="marketing-img" src="./images/marketing/marketing-img-1.png" alt="" />
@@ -294,7 +300,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="marketing-list-item marketing-list-item_photo col-md-4">
+                        <li class="marketing-list-item marketing-list-item_photo col-lg-4">
                             <a href="#" class="marketing-link">
                                 <span class="marketing-block">
                                     <img class="marketing-img" src="./images/marketing/marketing-img-2.png" alt="" />
@@ -305,7 +311,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="marketing-list-item marketing-list-item_education col-md-4">
+                        <li class="marketing-list-item marketing-list-item_education col-lg-4">
                             <a href="#" class="marketing-link">
                                 <span class="marketing-block">
                                     <img class="marketing-img" src="./images/marketing/marketing-img-3.png" alt="" />
@@ -329,7 +335,7 @@
             </section>
 
             <div class="container">
-                <a class="video" href="#">
+                <a class="video js-popup" href="https://youtu.be/srepKrsWsbg">
                     <img class="video-img" src="./images/video/video-img-1.jpg" alt="" />
                     <span class="video-block">
                         <span class="video-icon icon icon_play"></span>
@@ -337,6 +343,188 @@
                         <img class="video-logo" src="./images/nordski-logo-white.png" alt="Nordski" />
                     </span>
                 </a>
+
+                <section class="partner">
+                    <h2 class="partner-title title">Стать партнёром<br /> <span>NORDSKI</span></h2>
+                    <div class="partner-info">Оставьте свои контакты и получите выгодные условия сотрудничества</div>
+                    <form class="js-form-validate js-form" action="/">
+                        <div class="row">
+                            <div class="field col-md-4 js-form-validate-field">
+                                <input class="partner-input input" type="text" placeholder="Представьтесь" name="name-1" />
+                            </div>
+                            <div class="field col-md-4 js-form-validate-field">
+                                <input class="partner-input input js-mask-phone" type="text" placeholder="Телефон*" name="phone-1" required />
+                            </div>
+                            <div class="field col-md-4 js-form-validate-field">
+                                <input class="partner-input input js-mask-email" type="text" placeholder="Email" name="email-1" />
+                            </div>
+                        </div>
+                        <div class="partner-button">
+                            <button class="button">ПОЛУЧИТЬ УСЛОВИЯ СОТРУДНИЧЕСТВА</button>
+                        </div>
+                        <div class="partner-text">Нажимая кнопку «Получить условия сотрудничества», вы&nbsp;соглашаетесь с нашей <a href="#">политикой конфиденциальности</a></div>
+                    </form>
+                </section>
+
+                <section class="clients">
+                    <h2 class="clients-title title">Наши<br /> <span>КЛИЕНТЫ</span></h2>
+                    <div class="clients-info">У нас самые замечательные партнёры. Мы&nbsp;гордимся, что работаем с&nbsp;ними.</div>
+                    <div class="JS-Tab" data-tab="{
+                        'classSwitcherActive': 'clients-tabs-item_active',
+                        'classItemActive': 'clients-slider-wrapper_active'
+                    }">
+                        <ul class="clients-tabs row">
+                            <li class="clients-tabs-item clients-tabs-item_active col-md-4 JS-Tab-Switcher">
+                                <a class="clients-tabs-link link link_simple" href="javascript:;">Федеральные сети и&nbsp;сетевые сагазины</a>
+                            </li>
+                            <li class="clients-tabs-item col-md-4 JS-Tab-Switcher">
+                                <a class="clients-tabs-link link link_simple" href="javascript:;">Крупные магазины в&nbsp;торговых центрах</a>
+                            </li>
+                            <li class="clients-tabs-item col-md-4 JS-Tab-Switcher">
+                                <a class="clients-tabs-link link link_simple" href="javascript:;">Экипировочные центры и&nbsp;отдельные магазины</a>
+                            </li>
+                        </ul>
+
+                        <div class="clients-slider-wrapper clients-slider-wrapper_active JS-Tab-Item">
+                            <div class="clients-slider swiper js-slider-clients">
+                            <ul class="clients-list swiper-wrapper">
+                                <li class="clients-item swiper-slide">
+                                    <a class="clients-link" href="#">
+                                        <span class="clients-logo-wrapper">
+                                            <img class="clients-logo" src="./images/clients/kaht-logo.jpg" alt="" />
+                                        </span>
+                                        <img class="clients-img" src="./images/clients/clients-img-1.jpg" alt="" />
+                                    </a>
+                                </li>
+                                <li class="clients-item swiper-slide">
+                                    <a class="clients-link" href="#">
+                                       <span class="clients-logo-wrapper">
+                                            <img class="clients-logo" src="./images/clients/kaht-logo.jpg" alt="" />
+                                        </span>
+                                        <img class="clients-img" src="./images/clients/clients-img-2.jpg" alt="" />
+                                    </a>
+                                </li>
+                                <li class="clients-item swiper-slide">
+                                    <a class="clients-link" href="#">
+                                       <span class="clients-logo-wrapper">
+                                            <img class="clients-logo" src="./images/clients/kaht-logo.jpg" alt="" />
+                                        </span>
+                                        <img class="clients-img" src="./images/clients/clients-img-3.jpg" alt="" />
+                                    </a>
+                                </li>
+                                <li class="clients-item swiper-slide">
+                                    <a class="clients-link" href="#">
+                                       <span class="clients-logo-wrapper">
+                                            <img class="clients-logo" src="./images/clients/kaht-logo.jpg" alt="" />
+                                        </span>
+                                        <img class="clients-img" src="./images/clients/clients-img-4.jpg" alt="" />
+                                    </a>
+                                </li>
+                                <li class="clients-item swiper-slide">
+                                    <a class="clients-link" href="#">
+                                       <span class="clients-logo-wrapper">
+                                            <img class="clients-logo" src="./images/clients/kaht-logo.jpg" alt="" />
+                                        </span>
+                                        <img class="clients-img" src="./images/clients/clients-img-5.jpg" alt="" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="clients-slider-wrapper JS-Tab-Item">
+                            <div class="clients-slider swiper js-slider-clients">
+                                <ul class="clients-list swiper-wrapper">
+                                    <li class="clients-item swiper-slide">
+                                        <a class="clients-link" href="#">
+                                            <span class="clients-logo-wrapper">
+                                                <img class="clients-logo" src="./images/clients/sportlandiya-logo.png" alt="Спортландия" />
+                                            </span>
+                                            <img class="clients-img" src="./images/clients/sportlandiya/sportlandiya-img-1.jpg" alt="" />
+                                        </a>
+                                    </li>
+                                    <li class="clients-item swiper-slide">
+                                        <a class="clients-link" href="#">
+                                           <span class="clients-logo-wrapper">
+                                                <img class="clients-logo" src="./images/clients/sportlandiya-logo.png" alt="Спортландия" />
+                                            </span>
+                                            <img class="clients-img" src="./images/clients/sportlandiya/sportlandiya-img-2.jpg" alt="" />
+                                        </a>
+                                    </li>
+                                    <li class="clients-item swiper-slide">
+                                        <a class="clients-link" href="#">
+                                           <span class="clients-logo-wrapper">
+                                                <img class="clients-logo" src="./images/clients/sportlandiya-logo.png" alt="Спортландия" />
+                                            </span>
+                                            <img class="clients-img" src="./images/clients/sportlandiya/sportlandiya-img-3.jpg" alt="" />
+                                        </a>
+                                    </li>
+                                    <li class="clients-item swiper-slide">
+                                        <a class="clients-link" href="#">
+                                           <span class="clients-logo-wrapper">
+                                                <img class="clients-logo" src="./images/clients/sportlandiya-logo.png" alt="Спортландия" />
+                                            </span>
+                                            <img class="clients-img" src="./images/clients/sportlandiya/sportlandiya-img-4.jpg" alt="" />
+                                        </a>
+                                    </li>
+                                    <li class="clients-item swiper-slide">
+                                        <a class="clients-link" href="#">
+                                           <span class="clients-logo-wrapper">
+                                               <img class="clients-logo" src="./images/clients/sportlandiya-logo.png" alt="Спортландия" />
+                                            </span>
+                                            <img class="clients-img" src="./images/clients/sportlandiya/sportlandiya-img-5.jpg" alt="" />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clients-slider-wrapper JS-Tab-Item">
+                            <div class="clients-slider swiper js-slider-clients">
+                                <ul class="clients-list swiper-wrapper">
+                                    <li class="clients-item swiper-slide">
+                                        <a class="clients-link" href="#">
+                                            <span class="clients-logo-wrapper">
+                                                <img class="clients-logo" src="./images/clients/xlife-logo.png" alt="X-life" />
+                                            </span>
+                                            <img class="clients-img" src="./images/clients/xlife/xlife-img-1.jpg" alt="" />
+                                        </a>
+                                    </li>
+                                    <li class="clients-item swiper-slide">
+                                        <a class="clients-link" href="#">
+                                            <span class="clients-logo-wrapper">
+                                                <img class="clients-logo" src="./images/clients/xlife-logo.png" alt="X-life" />
+                                            </span>
+                                            <img class="clients-img" src="./images/clients/xlife/xlife-img-2.jpg" alt="" />
+                                        </a>
+                                    </li>
+                                    <li class="clients-item swiper-slide">
+                                        <a class="clients-link" href="#">
+                                            <span class="clients-logo-wrapper">
+                                                <img class="clients-logo" src="./images/clients/xlife-logo.png" alt="X-life" />
+                                            </span>
+                                            <img class="clients-img" src="./images/clients/xlife/xlife-img-3.jpg" alt="" />
+                                        </a>
+                                    </li>
+                                    <li class="clients-item swiper-slide">
+                                        <a class="clients-link" href="#">
+                                            <span class="clients-logo-wrapper">
+                                                <img class="clients-logo" src="./images/clients/xlife-logo.png" alt="X-life" />
+                                            </span>
+                                            <img class="clients-img" src="./images/clients/xlife/xlife-img-4.jpg" alt="" />
+                                        </a>
+                                    </li>
+                                    <li class="clients-item swiper-slide">
+                                        <a class="clients-link" href="#">
+                                            <span class="clients-logo-wrapper">
+                                                <img class="clients-logo" src="./images/clients/xlife-logo.png" alt="X-life" />
+                                            </span>
+                                            <img class="clients-img" src="./images/clients/xlife/xlife-img-5.jpg" alt="" />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
 
         </main>
@@ -358,7 +546,7 @@
                     <div class="footer-phone">
                         <a href="tel:+78004441053">+7(800)444-10-53</a>
                     </div>
-                    <a class="footer-callback" href="javascript:;">Заказать звонок</a>
+                    <a class="footer-callback js-open-callback" href="javascript:;" data-src="./ajax/callback.html">Заказать звонок</a>
                     <div class="footer-socials">
                         <ul class="socials">
                         <li class="socials-item">
@@ -421,6 +609,7 @@
     <script src="./libs/swiper/swiper.min.js"></script>
     <script src="./libs/swiper/swiper-bundle.min.js"></script>
     <script src="./js/JSC.Dropdown.js"></script>
+    <script src="./js/JSC.Tab.js"></script>
 
     <script src="./js/main.js"></script>
 
