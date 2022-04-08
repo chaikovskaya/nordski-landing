@@ -82,6 +82,16 @@ function initMask() {
         "showMaskOnHover": false,
     });
 }
+
+function initScroll() {
+    $('.js-custom-scroll').each(function(){
+        var customScroll = this;
+        new SimpleBar(customScroll, {
+            autoHide: false
+        });
+    });
+}
+
 function initPopup() {
     $(".js-popup").fancybox({
         toolbar  : false,
@@ -151,6 +161,43 @@ function initPopupCallback() {
     $(".js-open-callback").on('click', function() {
         $.fancybox.close();
         openPopupCallback($(".js-open-callback"));
+    });
+}
+
+function openPopupConfidential($element) {
+    if (typeof($element) == 'undefined') {
+        $element = $('.js-popup-confidential');
+    }
+
+    $.fancybox.open({
+        src  : $element.data('src'),
+        type : 'ajax',
+        toolbar  : false,
+        smallBtn : true,
+        afterShow: function (data) {
+            initValidate(data.$refs.container.find('.js-form-validate'));
+            initMask();
+            initScroll();
+        },
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-close fancybox-close_inner" title="{{CLOSE}}">' +
+                '<i class="fancybox-close-icon icon icon_close"></i>' +
+                "</button>",
+        },
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+            },
+        }
+    });
+}
+
+function initPopupConfidential() {
+    $(".js-open-confidential").on('click', function() {
+        $.fancybox.close();
+        openPopupConfidential($(".js-open-confidential"));
     });
 }
 
@@ -383,11 +430,13 @@ $(document).ready(function () {
     initDropdown();
     initValidate();
     initMask();
-    initScrollTop();
     initPopup();
+    initScrollTop();
+    initScroll();
     initSliderCategory();
     initSliderSport();
     initSliderClients();
     initTab();
     initPopupCallback();
+    initPopupConfidential();
 });
