@@ -60,17 +60,19 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 100%;
-    height: 100%;
 }
 
 .fancybox-button {
+    position: absolute;
+    top: 0;
+    left: 0;
     padding: 0;
     vertical-align: middle;
-
 }
 
 .fancybox-button--arrow_right {
+    left: auto;
+    right: 0;
     width: 94px;
     height: 100%;
     margin-right: -120px;
@@ -323,6 +325,289 @@ and (max-width: $mobile){
         &-block {
             padding-left: 0;
             padding-right: 0;
+        }
+    }
+}
+
+
+.card {
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    &-main {
+        padding-top: 64px;
+        padding-bottom: 72px;
+    }
+    &-footer {
+        padding-top: 30px;
+        padding-bottom: 36px;
+        background-color: #004161;
+    }
+    &-block {
+        @include clearfix();
+        margin-bottom: 33px;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &-gallery {
+        float: left;
+        width: 50%;
+        padding-right: 24px;
+    }
+    &-detail {
+        float: right;
+        width: 50%;
+    }
+    &-title-wrapper {
+        float: right;
+        width: 50%;
+    }
+    &-title {
+        margin-left: -50px;
+        color: #004161;
+        span {
+            text-transform: none;
+        }
+    }
+    &-gallery-wrapper {
+        max-width: 416px;
+    }
+    &-content {
+        ul {
+            margin-top: 45px;
+        }
+    }
+    &-price {
+        position: relative;
+        padding-top: 16px;
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 32px;
+        letter-spacing: 0.025em;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 65px;
+            height: 6px;
+            background-color: #3C9FFA;
+        }
+    }
+    &-price-currency {
+        font-size: 29px;
+    }
+    &-gallery-main {
+        overflow: hidden;
+        padding: 3px 20px 30px 14px;
+        margin-top: -3px;
+        margin-left: -14px;
+    }
+    &-gallery-link {
+        display: block;
+    }
+    &-gallery-img {
+        display: block;
+        width: 100%;
+        filter: drop-shadow(3px 14px 11px rgba(0, 0, 0, 0.25));
+    }
+    &-gallery-thumbs {
+        overflow: hidden;
+    }
+    &-thumbs-item {
+        width: 60px;
+        height: 60px;
+    }
+    &-thumbs-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+    &-thumbs-item.swiper-slide-thumb-active {
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #004161;
+        }
+    }
+    &-actions {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    &-button {
+        min-width: 393px;
+    }
+    &-text {
+        max-width: none;
+    }
+    &-close {
+        position: absolute;
+        top: -30px;
+        right: 54px;
+    }
+    &-container {
+        position: relative;
+    }
+    &-popup-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-popup-button_left {
+        margin-left: $gutters;
+        z-index: 1;
+    }
+    &-popup-button_right {
+        margin-right: $gutters;
+        z-index: 1;
+    }
+    &-close-block {
+        display: none;
+        text-align: center;
+    }
+    &-close-link {
+        min-width: 204px;
+    }
+
+    &_dark {
+        background-color: #293C4E;
+    }
+    &_dark &-footer {
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+    &_dark &-content {
+        color: #fff;
+        ul li:before {
+            background-color: #fff;
+        }
+    }
+    &_dark &-title {
+        color: #fff;
+    }
+    &_dark &-thumbs-item.swiper-slide-thumb-active {
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #fff;
+        }
+    }
+}
+
+@media screen
+and (max-width: $desktop){
+    .card {
+        &-main {
+            padding-bottom: 39px;
+        }
+        &-block {
+            max-width: 920px;
+        }
+        &-content {
+            ul {
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+@media screen
+and (max-width: $notebook){
+    .card {
+        &-main {
+            padding-bottom: 22px;
+        }
+        &-gallery-wrapper {
+            max-width: 340px;
+        }
+        &-block {
+            margin-bottom: 23px;
+        }
+        &-popup-button {
+            position: static;
+        }
+        &-popup-button_left {
+            margin-left: 0;
+        }
+        &-popup-button_right {
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen
+and (max-width: $tablet){
+    .card {
+        &-title {
+            margin-left: 0;
+            padding-left: 37px;
+        }
+        &-gallery-wrapper {
+            max-width: 336px;
+        }
+        &-content {
+            font-size: 18px;
+            line-height: 27px;
+        }
+        .card-price {
+            font-size: 25px;
+            line-height: 27px;
+        }
+    }
+}
+
+@media screen
+and (max-width: $mobile){
+    .card {
+        &-main {
+            padding-top: 74px;
+        }
+        &-footer {
+            padding-bottom: 39px;
+        }
+        &-block {
+            display: flex;
+            flex-direction: column;
+        }
+        &-gallery {
+            float: none;
+            width: 100%;
+            margin-bottom: 43px;
+            padding-right: 0;
+        }
+        &-title-wrapper {
+            float: none;
+            width: 100%;
+            order: -1;
+        }
+        &-detail {
+            float: none;
+            width: 100%;
+        }
+        &-gallery-wrapper {
+            max-width: none;
+        }
+        &-gallery-main {
+            overflow: visible;
+            margin-right: 70px;
+        }
+        &-text {
+            margin-bottom: 52px;
+        }
+        &-close-block {
+            display: block;
+        }
+        &-button {
+            min-width: auto;
         }
     }
 }

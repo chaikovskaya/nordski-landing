@@ -114,14 +114,12 @@ function initPopup() {
         afterLoad: function(instance, current) {
             if ( instance.group.length > 1 && current.$content ) {
                 current.$content.append('' +
-                    '<div class="fancybox-nav-block">' +
                     '<button class="fancybox-button fancybox-button--arrow_left prev" data-fancybox-prev>' +
                     '<i class="fancybox-button-icon fancybox-button-icon_left"><i class="icon icon_arrow-left"></i></i>' +
                     '</button>' +
                     '<button class="fancybox-button fancybox-button--arrow_right next" data-fancybox-next>' +
                     '<i class="fancybox-button-icon fancybox-button-icon_right"><i class="icon icon_arrow-right"></i></i>' +
-                    '</button>' +
-                    '</div>'
+                    '</button>'
                 );
             }
         }
@@ -141,6 +139,7 @@ function openPopupCallback($element) {
         afterShow: function (data) {
             initValidate(data.$refs.container.find('.js-form-validate'));
             initMask();
+            initPopupConfidential();
         },
         btnTpl: {
             smallBtn:
@@ -409,6 +408,205 @@ function initScrollTop() {
     });
 }
 
+function initNumerator() {
+    jQuery('.js-numerator-item').each(function() {
+        var $element = $(this),
+            $parent = $(this).closest('.js-numerator'),
+            $value = $element.find('.js-numerator-value'),
+            value = $value.text(),
+            max = $element.data('numerator-max'),
+            step = $element.data('numerator-step'),
+            speed = $element.data('numerator-speed');
+
+        function start() {
+            if (value < max){
+                value = Number(value) + Number(step);
+                $value.html(value);
+                setTimeout(start, speed);
+            } else {
+                if (value > 0){
+                    if (value >= 1000000){
+                        max = value/1000000;
+                    }
+                    $value.html(max);
+                    $parent.addClass('advantages-list_active');
+                }
+            }
+        }
+        start();
+    });
+}
+
+function initNumerator2() {
+    jQuery('.js-numerator-item-2').each(function() {
+        var $element = $(this),
+            $parent = $(this).closest('.js-numerator'),
+            $value = $element.find('.js-numerator-value'),
+            value = $value.text(),
+            max = $element.data('numerator-max'),
+            step = $element.data('numerator-step'),
+            speed = $element.data('numerator-speed');
+
+        function start() {
+            if (value < max){
+                value = Number(value) + Number(step);
+                $value.html(value);
+                setTimeout(start, speed);
+            } else {
+                if (value > 0){
+                    if (value >= 1000000){
+                        max = value/1000000;
+                    }
+                    $value.html(max);
+                    $parent.addClass('advantages-list_active');
+                }
+            }
+        }
+        start();
+    });
+}
+
+function initAnimateSection() {
+    var wow = new WOW(
+        {
+            boxClass:     'js-animate-section',
+            animateClass: 'animated',
+            offset:       200,
+            mobile:       true,
+            live:         true,
+            callback:     function(box) {
+                initNumerator();
+            },
+            scrollContainer: null,
+        }
+    );
+    wow.init();
+}
+
+function initAnimateSection2() {
+    var wow = new WOW(
+        {
+            boxClass:     'js-animate-section-2',
+            animateClass: 'animated',
+            offset:       200,
+            mobile:       true,
+            live:         true,
+            callback:     function(box) {
+                initNumerator2();
+            },
+            scrollContainer: null,
+        }
+    );
+    wow.init();
+}
+
+function initAnchorScroll() {
+    var $page = $('html, body');
+
+    $('a[href*="#"]').click(function() {
+        $page.animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+        return false;
+    });
+}
+
+function initGalleryCard() {
+    var galleryThumbs = new Swiper(".js-gallery-card-thumbs", {
+        loop: false,
+        centeredSlides: false,
+        centeredSlidesBounds: false,
+        direction: "horizontal",
+        spaceBetween: 10,
+        slidesPerView: "auto",
+        autoHeight: false,
+        freeMode: false,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        watchOverflow: true,
+        navigation: false,
+        breakpoints: {
+        }
+    });
+    var galleryTop = new Swiper(".js-gallery-card-main", {
+        loop: false,
+        direction: "horizontal",
+        navigation: {
+            nextEl: ".js-slider-next",
+            prevEl: ".js-slider-prev",
+        },
+        pagination: false,
+        thumbs: {
+            swiper: galleryThumbs
+        },
+        breakpoints: {
+            0: {
+                spaceBetween: 24,
+            },
+            744: {
+                spaceBetween: 48,
+            },
+        },
+    });
+    $(".js-gallery-card-prev").on('click', function(e) {
+        galleryTop.slidePrev();
+    });
+    $(".js-gallery-card-next").on('click', function(e) {
+        galleryTop.slideNext();
+    });
+};
+
+
+function initPopupGallery() {
+    $(".js-popup-gallery").fancybox({
+        src  : $(this).data('src'),
+        type : 'ajax',
+        toolbar  : false,
+        smallBtn : true,
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
+                '<i class="fancybox-close-icon icon icon_close"></i>' +
+                "</button>",
+        },
+        arrows: false,
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+            },
+        },
+        beforeClose: function (instance) {
+        },
+        afterLoad: function(instance, current) {
+            if ( instance.group.length > 1 && current.$content ) {
+                $('.card-container').append('' +
+                    '<div class="card-popup-buttons">' +
+                    '<button class="card-popup-button card-popup-button_left fancybox-button fancybox-button--arrow_left prev" data-fancybox-prev>' +
+                    '<i class="fancybox-button-icon fancybox-button-icon_left"><i class="icon icon_arrow-left"></i></i>' +
+                    '</button>' +
+                    '<button class="card-popup-button card-popup-button_right fancybox-button fancybox-button--arrow_right next" data-fancybox-next>' +
+                    '<i class="fancybox-button-icon fancybox-button-icon_right"><i class="icon icon_arrow-right"></i></i>' +
+                    '</button>' +
+                    '</div>'
+                );
+            }
+        },
+        afterShow: function (data) {
+            initValidate(data.$refs.container.find('.js-form-validate'));
+            initMask();
+            initScroll();
+            initGalleryCard();
+            initPopupClose();
+        },
+    });
+}
+
+function initPopupClose() {
+    $('.js-popup-close').on('click', function () {
+        $.fancybox.close();
+    });
+}
 
 function initResizeWindow() {
     var width = $(window).outerWidth();
@@ -439,4 +637,10 @@ $(document).ready(function () {
     initTab();
     initPopupCallback();
     initPopupConfidential();
+    initAnimateSection();
+    initAnimateSection2();
+    initAnchorScroll();
+    initGalleryCard();
+    initPopupGallery();
+    initPopupClose();
 });

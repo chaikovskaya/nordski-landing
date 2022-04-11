@@ -146,6 +146,7 @@
 
 .advantages {
     margin-bottom: 110px;
+    &.animated {}
     &-list {}
     &-item {
         text-align: center;
@@ -168,15 +169,22 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 56px;
+            width: 0;
             height: 6px;
             background-color: #3C9FFA;
+            transition: width 0.5s linear;
         }
         sup {
             font-size: 44px;
             line-height: 10px;
         }
     }
+    &-list_active &-number {
+        &:after {
+            width: 56px;
+        }
+    }
+
     &-detail {
         display: block;
         min-height: 72px;
@@ -245,6 +253,17 @@ and (max-width: $tablet){
     }
     .advantages {
         margin-bottom: 44px;
+        &-number {
+            padding-bottom: 16px;
+            font-size: 50px;
+            line-height: 60px;
+            sup {
+                font-size: 36px;
+            }
+        }
+        &-currency {
+            font-size: 49px;
+        }
     }
 }
 
@@ -266,6 +285,9 @@ and (max-width: $mobile){
             width: 100%;
             padding-top: 167px;
             text-align: center;
+        }
+        &-info-2 {
+            font-size: 45px;
         }
         &-info-3 {
             margin-bottom: 32px;
@@ -955,6 +977,7 @@ and (max-width: $mobile){
     .video {
         margin-bottom: 88px;
         &-block {
+            width: 100%;
             margin-top: 23px;
         }
     }
@@ -1065,9 +1088,6 @@ and (max-width: $mobile){
             &:last-child {
                 margin-bottom: 0;
             }
-        }
-        &-slider {
-            margin-right: 243px;
         }
     }
 }

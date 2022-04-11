@@ -1,5 +1,5 @@
 
-$colorPlaceholder: #828282;
+$colorPlaceholder: #C2C2C2;
 
 .field {
     margin-bottom: 52px;
@@ -10,7 +10,7 @@ $colorPlaceholder: #828282;
     height: 50px;
     padding: 15px 32px;
     background-color: transparent;
-    color: #C2C2C2;
+    color: #9A9A9A;
     font-size: 20px;
     border: 1px solid transparent;
     border-bottom-color: #3C9FFA;
@@ -18,7 +18,7 @@ $colorPlaceholder: #828282;
     text-align: center;
     transition: border-color 0.3s linear;
     &:focus {
-        color: #1F4466;
+        color: #9A9A9A;
         border-color: #3C9FFA;
     }
     &::-webkit-input-placeholder {font-size: 20px; color: $colorPlaceholder;}
@@ -184,6 +184,7 @@ label.form-error {
 }
 
 .button {
+    @include bgrcolor();
     position: relative;
     display: inline-block;
     height: 54px;
@@ -200,23 +201,17 @@ label.form-error {
     cursor: pointer;
     letter-spacing: 0.095em;
     -webkit-appearance: none;
-    background-color: transparent;
     outline: none;
-    &:after {
-        @include bgrcolor();
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background-color: #3C9FFA;
-        border-radius: 8px;
-        transform: skew(159deg);
+    background-color: #3C9FFA;
+    border-radius: 8px;
+    transform: skew(159deg);
+    &-label {
+        display: inline-block;
+        transform: skew(-159deg);
     }
     &:hover {
         color: #fff;
+        background-color: #FF6B00;
     }
     &:active {
         color: #fff;
@@ -224,9 +219,6 @@ label.form-error {
     &:disabled {
         opacity: 0.8;
         cursor: not-allowed;
-    }
-    &:hover:after {
-        background-color: #FF6B00;
     }
 
     &_simple {
@@ -237,9 +229,8 @@ label.form-error {
         background-color: #3C9FFA;
         font-size: 18px;
         letter-spacing: normal;
-        &:after {
-            display: none;
-        }
+        transform: none;
+        border-radius: 0;
         &:hover {
             background-color: #FF6B00;
         }
@@ -257,4 +248,9 @@ and (max-width: $tablet){
 
 @media screen
 and (max-width: $mobile){
+    .button {
+        padding-right: 18px;
+        padding-left: 18px;
+        font-size: 14px;
+    }
 }

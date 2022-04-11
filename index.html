@@ -27,16 +27,16 @@
             <div class="header-main-menu">
                 <ul class="main-menu">
                     <li class="main-menu-item">
-                        <a class="main-menu-link" href="#">КОЛЛЕКЦИИ</a>
+                        <a class="main-menu-link" href="#category">КОЛЛЕКЦИИ</a>
                     </li>
                     <li class="main-menu-item">
-                        <a class="main-menu-link" href="#">АУДИТОРИИ</a>
+                        <a class="main-menu-link" href="#audience">АУДИТОРИИ</a>
                     </li>
                     <li class="main-menu-item">
-                        <a class="main-menu-link" href="#">О КОМПАНИИ</a>
+                        <a class="main-menu-link" href="#today">О КОМПАНИИ</a>
                     </li>
                     <li class="main-menu-item">
-                        <a class="main-menu-link" href="#">МАРКЕТИНГОВАЯ ПОДДЕРЖКА</a>
+                        <a class="main-menu-link" href="#marketing">МАРКЕТИНГОВАЯ ПОДДЕРЖКА</a>
                     </li>
                 </ul>
             </div>
@@ -50,7 +50,9 @@
                             <div class="main-info-1">Российский производитель</div>
                             <div class="main-info-2">спортивной одежды</div>
                             <div class="main-info-3">Прямые оптовые поставки<br /> со&nbsp;складов бренда</div>
-                            <a class="button" href="#">ПОЛУЧИТЬ УСЛОВИЯ СОТРУДНИЧЕСТВА</a>
+                            <a class="button" href="#partner">
+                                <span class="button-label">ПОЛУЧИТЬ УСЛОВИЯ СОТРУДНИЧЕСТВА</span>
+                            </a>
                         </div>
                         <div class="main-info-contacts">
                             <div class="main-info-contacts-links">
@@ -98,82 +100,96 @@
             <div class="main-content-menu">
                 <ul class="main-menu">
                     <li class="main-menu-item">
-                        <a class="main-menu-link" href="#">КОЛЛЕКЦИИ</a>
+                        <a class="main-menu-link" href="#category">КОЛЛЕКЦИИ</a>
                     </li>
                     <li class="main-menu-item">
-                        <a class="main-menu-link" href="#">АУДИТОРИИ</a>
+                        <a class="main-menu-link" href="#audience">АУДИТОРИИ</a>
                     </li>
                     <li class="main-menu-item">
-                        <a class="main-menu-link" href="#">О КОМПАНИИ</a>
+                        <a class="main-menu-link" href="#today">О КОМПАНИИ</a>
                     </li>
                     <li class="main-menu-item">
-                        <a class="main-menu-link" href="#">МАРКЕТИНГОВАЯ ПОДДЕРЖКА</a>
+                        <a class="main-menu-link" href="#marketing">МАРКЕТИНГОВАЯ ПОДДЕРЖКА</a>
                     </li>
                 </ul>
             </div>
 
             <div class="container">
-                <div class="advantages">
-                    <ul class="advantages-list row">
+                <div class="advantages js-animate-section1">
+                    <ul class="advantages-list row js-numerator">
                         <li class="advantages-item col-6 col-md-3">
-                            <span class="advantages-number">&#62;753</span>
+                            <span class="advantages-number js-numerator-item" data-numerator-max="753" data-numerator-step="9" data-numerator-speed="20">&#62;<span class="js-numerator-value">0</span></span>
                             <span class="advantages-detail">моделей в&nbsp;ассортименте</span>
                         </li>
                         <li class="advantages-item col-6 col-md-3">
-                            <span class="advantages-number">&#62;40 000</span>
+                            <span class="advantages-number js-numerator-item" data-numerator-max="40000" data-numerator-step="500" data-numerator-speed="20">&#62;<span class="js-numerator-value">0</span></span>
                             <span class="advantages-detail">единиц продукции в&nbsp;наличии</span>
                         </li>
                         <li class="advantages-item col-6 col-md-3">
-                            <span class="advantages-number">1-2</span>
+                            <span class="advantages-number">
+                                <span class="js-numerator-item" data-numerator-max="1" data-numerator-step="1" data-numerator-speed="600"><span class="js-numerator-value">0</span></span>-<span class="js-numerator-item" data-numerator-max="2" data-numerator-step="1" data-numerator-speed="600"><span class="js-numerator-value">0</span></span>
+                            </span>
                             <span class="advantages-detail">дня на&nbsp;быструю отгрузку</span>
                         </li>
                         <li class="advantages-item col-6 col-md-3">
-                            <span class="advantages-number">0<span class="advantages-currency currency">i</span></span>
+                            <span class="advantages-number js-numerator-item" data-numerator-max="0" data-numerator-step="0" data-numerator-speed="0">
+                                <span class="js-numerator-value">0</span><span class="advantages-currency currency">i</span>
+                            </span>
                             <span class="advantages-detail">первая доставка бесплатная</span>
                         </li>
                     </ul>
                 </div>
 
-                <section class="category">
+                <section class="category" id="category">
                     <h2 class="title">Летняя коллекция<br /> <span>2022</span></h2>
                     <div class="category-slider swiper js-slider-category">
                         <ul class="category-list swiper-wrapper">
                             <li class="category-item swiper-slide">
-                                <a class="category-link" href="#">
+                                <a class="category-link js-popup-gallery" href="javascript:;" data-fancybox="category-1" data-src="./ajax/category/category-1/card-1.html">
                                     <img class="category-img" src="./images/category/category-img-1.jpg" alt="" />
                                     <span class="category-name">Run</span>
                                 </a>
+                                <a class="g-hidden js-popup-gallery" href="javascript:;" data-fancybox="category-1" data-src="./ajax/category/category-1/card-2.html"></a>
+                                <a class="g-hidden js-popup-gallery" href="javascript:;" data-fancybox="category-1" data-src="./ajax/category/category-1/card-3.html"></a>
                             </li>
                             <li class="category-item swiper-slide">
-                                <a class="category-link" href="#">
+                                <a class="category-link js-popup-gallery" href="javascript:;" data-fancybox="category-2" data-src="./ajax/category/category-1/card-1.html">
                                     <img class="category-img" src="./images/category/category-img-2.jpg" alt="" />
                                     <span class="category-name">Pro</span>
                                 </a>
+                                <a class="g-hidden js-popup-gallery" href="javascript:;" data-fancybox="category-2" data-src="./ajax/category/category-1/card-2.html"></a>
+                                <a class="g-hidden js-popup-gallery" href="javascript:;" data-fancybox="category-2" data-src="./ajax/category/category-1/card-3.html"></a>
                             </li>
                             <li class="category-item swiper-slide">
-                                <a class="category-link" href="#">
+                                <a class="category-link js-popup-gallery" href="javascript:;" data-fancybox="category-3" data-src="./ajax/category/category-1/card-1.html">
                                     <img class="category-img" src="./images/category/category-img-3.jpg" alt="" />
                                     <span class="category-name">Outdoor</span>
                                 </a>
+                                <a class="g-hidden js-popup-gallery" href="javascript:;" data-fancybox="category-3" data-src="./ajax/category/category-1/card-2.html"></a>
+                                <a class="g-hidden js-popup-gallery" href="javascript:;" data-fancybox="category-3" data-src="./ajax/category/category-1/card-3.html"></a>
                             </li>
                             <li class="category-item swiper-slide">
-                                <a class="category-link" href="#">
+                                <a class="category-link js-popup-gallery" href="javascript:;" data-fancybox="category-4" data-src="./ajax/category/category-1/card-1.html">
                                     <img class="category-img" src="./images/category/category-img-4.jpg" alt="" />
                                     <span class="category-name">Sport Casual</span>
                                 </a>
+                                <a class="g-hidden js-popup-gallery" href="javascript:;" data-fancybox="category-4" data-src="./ajax/category/category-1/card-2.html"></a>
+                                <a class="g-hidden js-popup-gallery" href="javascript:;" data-fancybox="category-4" data-src="./ajax/category/category-1/card-3.html"></a>
                             </li>
                             <li class="category-item swiper-slide">
-                                <a class="category-link" href="#">
+                                <a class="category-link js-popup-gallery" href="javascript:;" data-fancybox="category-5" data-src="./ajax/category/category-1/card-1.html">
                                     <img class="category-img" src="./images/category/category-img-5.jpg" alt="" />
                                     <span class="category-name">Accessories</span>
                                 </a>
+                                <a class="g-hidden js-popup-gallery" href="javascript:;" data-fancybox="category-5" data-src="./ajax/category/category-1/card-2.html"></a>
+                                <a class="g-hidden js-popup-gallery" href="javascript:;" data-fancybox="category-5" data-src="./ajax/category/category-1/card-3.html"></a>
                             </li>
                         </ul>
                     </div>
                 </section>
             </div>
 
-            <section class="sport block">
+            <section class="sport block" id="audience">
                 <div class="container">
                     <h2 class="title">СПОРТ<br /> <span>Круглый год</span></h2>
                     <div class="sport-slider swiper js-slider-sport">
@@ -235,23 +251,23 @@
             </section>
 
             <div class="container">
-                <section class="today">
+                <section class="today" id="today">
                     <h2 class="title">NORDSKI<br /> <span>СЕГОДНЯ</span></h2>
-                    <ul class="advantages-list row">
+                    <ul class="advantages-list row js-numerator js-animate-section-2">
                         <li class="advantages-item col-6 col-md-3">
-                            <span class="advantages-number">&#62;360</span>
+                            <span class="advantages-number js-numerator-item-2" data-numerator-max="360" data-numerator-step="7" data-numerator-speed="20">&#62;<span class="js-numerator-value">0</span></span>
                             <span class="advantages-detail">оптовых партнёров в&nbsp;55 регионах России и&nbsp;стран СНГ</span>
                         </li>
                         <li class="advantages-item col-6 col-md-3">
-                            <span class="advantages-number">&#62;750</span>
+                            <span class="advantages-number js-numerator-item-2" data-numerator-max="750" data-numerator-step="9" data-numerator-speed="20">&#62;<span class="js-numerator-value">0</span></span>
                             <span class="advantages-detail">разработанных и выпущенных на&nbsp;рынок моделей одежды</span>
                         </li>
                         <li class="advantages-item col-6 col-md-3">
-                            <span class="advantages-number">3000м<sup>2</sup></span>
+                            <span class="advantages-number js-numerator-item-2" data-numerator-max="3000" data-numerator-step="30" data-numerator-speed="20"><span class="js-numerator-value">0</span>м<sup>2</sup></span>
                             <span class="advantages-detail">площадь складских помещений</span>
                         </li>
                         <li class="advantages-item col-6 col-md-3">
-                            <span class="advantages-number">1 млн.</span>
+                            <span class="advantages-number js-numerator-item-2" data-numerator-max="1000000" data-numerator-step="1000000" data-numerator-speed="20"><span class="js-numerator-value">0</span> млн.</span>
                             <span class="advantages-detail">единиц продукции — объём дистрибуции в&nbsp;год</span>
                         </li>
                     </ul>
@@ -284,13 +300,13 @@
                 </section>
             </div>
 
-            <section class="marketing block">
+            <section class="marketing block" id="marketing">
                 <div class="container">
                     <h2 class="marketing-title title">Полная маркетинговая<br /> <span>поддержка партнёров</span></h2>
 
                     <ul class="marketing-list row">
                         <li class="marketing-list-item marketing-list-item_promo col-lg-4">
-                            <a href="#" class="marketing-link">
+                            <a class="marketing-link js-popup-gallery" href="javascript:;" data-fancybox="marketing-1" data-src="./ajax/marketing/marketing-1/card-1.html">
                                 <span class="marketing-block">
                                     <img class="marketing-img" src="./images/marketing/marketing-img-1.png" alt="" />
                                 </span>
@@ -299,6 +315,7 @@
                                     <span class="marketing-more link">Посмотреть пример</span>
                                 </span>
                             </a>
+                            <a class="g-hidden js-popup-gallery" href="javascript:;" data-fancybox="marketing-1" data-src="./ajax/marketing/marketing-1/card-2.html"></a>
                         </li>
                         <li class="marketing-list-item marketing-list-item_photo col-lg-4">
                             <a href="#" class="marketing-link">
@@ -344,7 +361,7 @@
                     </span>
                 </a>
 
-                <section class="partner">
+                <section class="partner" id="partner">
                     <h2 class="partner-title title">Стать партнёром<br /> <span>NORDSKI</span></h2>
                     <div class="partner-info">Оставьте свои контакты и получите выгодные условия сотрудничества</div>
                     <form class="js-form-validate js-form" action="/">
@@ -360,9 +377,11 @@
                             </div>
                         </div>
                         <div class="partner-button">
-                            <button class="button">ПОЛУЧИТЬ УСЛОВИЯ СОТРУДНИЧЕСТВА</button>
+                            <button class="button">
+                                <span class="button-label">ПОЛУЧИТЬ УСЛОВИЯ СОТРУДНИЧЕСТВА</span>
+                            </button>
                         </div>
-                        <div class="partner-text">Нажимая кнопку «Получить условия сотрудничества», вы&nbsp;соглашаетесь с нашей <a href="#">политикой конфиденциальности</a></div>
+                        <div class="partner-text">Нажимая кнопку «Получить условия сотрудничества», вы&nbsp;соглашаетесь с нашей <a class="js-open-confidential" href="javascript:;" data-src="./ajax/confidentially.html">политикой конфиденциальности</a></div>
                     </form>
                 </section>
 
@@ -608,6 +627,7 @@
     <script src="./libs/Selectric/public/jquery.selectric.min.js"></script>
     <script src="./libs/swiper/swiper.min.js"></script>
     <script src="./libs/swiper/swiper-bundle.min.js"></script>
+    <script defer src="./libs/wow/wow.min.js"></script>
     <script src="./js/JSC.Dropdown.js"></script>
     <script src="./js/JSC.Tab.js"></script>
 
