@@ -518,7 +518,7 @@ blockquote {
   visibility: hidden;
   position: fixed;
   z-index: 100;
-  bottom: 55px;
+  bottom: 40px;
   right: 25px;
   width: 64px;
   height: 64px;
@@ -648,7 +648,8 @@ blockquote {
     background-color: #3C9FFA;
     transform: skew(159deg); }
   .title span {
-    font-weight: 300; }
+    font-weight: 300;
+    letter-spacing: normal; }
 
 .link {
   display: inline-block;
@@ -708,9 +709,16 @@ blockquote {
 
 @media screen and (max-width: 744px) {
   .title {
-    margin-bottom: 28px; }
+    margin-bottom: 28px;
+    font-size: 30px;
+    line-height: 40px; }
+    .title:before {
+      top: 9px;
+      height: 60px; }
   .slider-nav {
-    display: none; } }
+    display: none; }
+  .button-up {
+    right: 7px; } }
 
 .field {
   margin-bottom: 52px; }
@@ -917,9 +925,9 @@ label.form-error {
 
 @media screen and (max-width: 744px) {
   .button {
-    padding-right: 18px;
-    padding-left: 18px;
-    font-size: 14px; } }
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 13px; } }
 
 /* Fancybox */
 .fancybox-bg {
@@ -1005,7 +1013,8 @@ label.form-error {
   .fancybox-button-icon:hover {
     background-color: rgba(255, 255, 255, 0.1); }
 
-.fancybox-button[disabled] {
+.fancybox-button[disabled],
+.fancybox-button.disabled {
   visibility: hidden; }
 
 .fancybox-button[disabled] .fancybox-button-icon {
@@ -1052,7 +1061,7 @@ label.form-error {
     display: block;
     position: relative;
     margin-bottom: 11px;
-    padding-left: 50px;
+    padding-left: 55px;
     color: #fff;
     font-weight: 900;
     font-size: 40px;
@@ -1063,7 +1072,7 @@ label.form-error {
       content: '';
       position: absolute;
       top: 12px;
-      left: 0;
+      left: 7px;
       width: 9px;
       height: 73px;
       background-color: #3C9FFA;
@@ -1102,7 +1111,7 @@ label.form-error {
 
 .сonfidential-title {
   margin-bottom: 68px;
-  margin-left: -50px; }
+  margin-left: -55px; }
 
 .сonfidential-container {
   max-width: 1076px;
@@ -1199,7 +1208,7 @@ label.form-error {
   .card-gallery {
     float: left;
     width: 50%;
-    padding-right: 24px; }
+    padding-right: 77px; }
   .card-detail {
     float: right;
     width: 50%; }
@@ -1207,14 +1216,16 @@ label.form-error {
     float: right;
     width: 50%; }
   .card-title {
-    margin-left: -50px;
+    margin-left: -55px;
     color: #004161; }
     .card-title span {
       text-transform: none; }
   .card-gallery-wrapper {
     max-width: 416px; }
-  .card-content ul {
-    margin-top: 45px; }
+  .card-content {
+    margin-bottom: 70px; }
+    .card-content ul {
+      margin-top: 50px; }
   .card-price {
     position: relative;
     padding-top: 16px;
@@ -1237,6 +1248,8 @@ label.form-error {
     padding: 3px 20px 30px 14px;
     margin-top: -3px;
     margin-left: -14px; }
+  .card-gallery-main-item {
+    margin-right: 48px; }
   .card-gallery-link {
     display: block; }
   .card-gallery-img {
@@ -1247,7 +1260,8 @@ label.form-error {
     overflow: hidden; }
   .card-thumbs-item {
     width: 60px;
-    height: 60px; }
+    height: 60px;
+    margin-right: 10px; }
   .card-thumbs-img {
     display: block;
     width: 100%;
@@ -1289,6 +1303,20 @@ label.form-error {
     text-align: center; }
   .card-close-link {
     min-width: 204px; }
+  .card-message {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #FFFFFF; }
+  .card-message-title {
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 29px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase; }
+  .card-message-text {
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 27px; }
   .card_dark {
     background-color: #293C4E; }
   .card_dark .card-footer {
@@ -1307,14 +1335,18 @@ label.form-error {
     width: 100%;
     height: 100%;
     border: 2px solid #fff; }
+  .card_dark .card-gallery-wrapper {
+    max-width: none; }
 
 @media screen and (max-width: 1344px) {
   .card-main {
     padding-bottom: 39px; }
   .card-block {
     max-width: 920px; }
-  .card-content ul {
-    margin-top: 15px; } }
+  .card-content {
+    margin-bottom: 35px; }
+    .card-content ul {
+      margin-top: 15px; } }
 
 @media screen and (max-width: 1164px) {
   .card-main {
@@ -1334,8 +1366,8 @@ label.form-error {
   .card-title {
     margin-left: 0;
     padding-left: 37px; }
-  .card-gallery-wrapper {
-    max-width: 336px; }
+  .card-gallery {
+    padding-right: 10px; }
   .card-content {
     font-size: 18px;
     line-height: 27px; }
@@ -1351,6 +1383,8 @@ label.form-error {
   .card-block {
     display: flex;
     flex-direction: column; }
+  .card-gallery-main-item {
+    margin-right: 24px; }
   .card-gallery {
     float: none;
     width: 100%;
@@ -1367,7 +1401,7 @@ label.form-error {
     max-width: none; }
   .card-gallery-main {
     overflow: visible;
-    margin-right: 70px; }
+    margin-right: 50px; }
   .card-text {
     margin-bottom: 52px; }
   .card-close-block {
@@ -1392,7 +1426,7 @@ label.form-error {
   align-items: center; }
   .main-menu-item {
     position: relative;
-    margin-right: 60px; }
+    margin-right: 61px; }
     .main-menu-item:last-child {
       margin-right: 0; }
   .main-menu-link {
@@ -1545,12 +1579,12 @@ label.form-error {
     justify-content: center; } }
 
 .main-content {
-  padding-bottom: 88px; }
+  padding-bottom: 91px; }
 
 .main {
   position: relative;
   height: 766px;
-  margin-bottom: 81px;
+  margin-bottom: 85px;
   background: linear-gradient(90deg, #1F4466 50%, #c6c6c6 50%); }
   .main:before {
     content: '';
@@ -1588,7 +1622,7 @@ label.form-error {
     width: 50%;
     height: 100%;
     padding-top: 115px;
-    padding-bottom: 70px;
+    padding-bottom: 62px;
     color: #fff; }
     .main-info a {
       color: #fff; }
@@ -1607,16 +1641,18 @@ label.form-error {
     letter-spacing: 0.05em;
     text-transform: uppercase; }
   .main-info-3 {
-    margin-bottom: 46px;
+    margin-bottom: 44px;
     font-weight: 300;
     font-size: 25px;
     line-height: 29px; }
+  .main-info-button {
+    margin-left: 7px; }
   .main-info-contacts {
     margin-top: auto; }
   .main-info-contacts-links {
     margin-bottom: 29px; }
   .main-phone {
-    margin-right: 19px;
+    margin-right: 13px;
     font-weight: 900;
     font-size: 28px;
     line-height: 34px;
@@ -1640,7 +1676,7 @@ label.form-error {
   flex-wrap: wrap;
   align-items: center; }
   .socials-item {
-    margin-right: 22px; }
+    margin-right: 23px; }
     .socials-item:last-child {
       margin-right: 0; }
   .socials-link {
@@ -1664,7 +1700,7 @@ label.form-error {
   display: none; }
 
 .advantages {
-  margin-bottom: 110px; }
+  margin-bottom: 100px; }
   .advantages-item {
     text-align: center;
     margin-bottom: 20px; }
@@ -1737,7 +1773,7 @@ label.form-error {
   .advantages {
     margin-bottom: 44px; }
     .advantages-number {
-      padding-bottom: 16px;
+      padding-bottom: 10px;
       font-size: 50px;
       line-height: 60px; }
       .advantages-number sup {
@@ -1774,13 +1810,24 @@ label.form-error {
     .main-phone {
       margin-right: 0;
       margin-bottom: 10px; }
+    .main-info-button {
+      margin-left: 0; }
   .socials {
     justify-content: center; }
   .advantages {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+    .advantages-number {
+      font-size: 43px; }
+      .advantages-number sup {
+        font-size: 28px; }
+    .advantages-detail {
+      font-size: 18px;
+      font-weight: 400; }
+    .advantages-currency {
+      font-size: 42px; } }
 
 .category {
-  margin-bottom: 150px; }
+  margin-bottom: 157px; }
   .category-link {
     display: block;
     text-decoration: none;
@@ -1805,7 +1852,7 @@ label.form-error {
     margin-right: -260px; }
 
 .block {
-  padding-top: 60px;
+  padding-top: 57px;
   padding-bottom: 84px;
   background-color: #293C4E; }
   .block .title {
@@ -1813,15 +1860,23 @@ label.form-error {
 
 .sport {
   margin-bottom: 80px; }
+  .sport-title {
+    margin-bottom: 49px; }
   .sport-slider {
     position: relative;
     overflow: visible; }
+  .sport-list {
+    overflow: hidden; }
+  .sport-item {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100%; }
   .sport-block {
     position: relative;
     display: flex;
-    overflow: hidden;
     margin-bottom: 25px;
-    background-color: #3C9FFA; }
+    background: linear-gradient(90deg, #3C9FFA 70%, transparent 30%); }
   .sport-block-item {
     overflow: hidden; }
     .sport-block-item:nth-child(1) {
@@ -1834,8 +1889,10 @@ label.form-error {
     width: 100%; }
   .sport-panel {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    height: 100%; }
   .sport-name {
+    height: 100%;
     flex-grow: 1;
     font-size: 30px;
     line-height: 35px;
@@ -1855,12 +1912,16 @@ label.form-error {
     margin-right: 80px; }
 
 .today {
-  margin-bottom: 66px; }
+  margin-bottom: 69px; }
+  .today-title {
+    margin-bottom: 82px; }
+  .today-detail {
+    line-height: 37px; }
 
 .partners {
   margin-bottom: 127px; }
   .partners-info {
-    margin-bottom: 66px;
+    margin-bottom: 71px;
     text-align: center;
     font-weight: 300;
     font-size: 50px;
@@ -1927,7 +1988,9 @@ label.form-error {
   .partners {
     margin-bottom: 113px; }
     .partners-info {
-      margin-bottom: 53px; } }
+      margin-bottom: 53px; }
+  .today-detail {
+    line-height: 31px; } }
 
 @media screen and (max-width: 1164px) {
   .category-slider {
@@ -1946,7 +2009,9 @@ label.form-error {
       font-size: 40px;
       line-height: 42px; }
   .today {
-    margin-bottom: 34px; } }
+    margin-bottom: 34px; }
+    .today-detail {
+      line-height: 27px; } }
 
 @media screen and (max-width: 984px) {
   .category {
@@ -1956,7 +2021,11 @@ label.form-error {
   .partners {
     margin-bottom: 68px; }
     .partners-info {
-      margin-bottom: 35px; } }
+      margin-bottom: 35px; }
+  .today-title {
+    margin-bottom: 67px; }
+  .today-detail {
+    line-height: 24px; } }
 
 @media screen and (max-width: 744px) {
   .category {
@@ -1965,7 +2034,6 @@ label.form-error {
       margin-left: 0;
       margin-right: 24px; }
   .sport-panel {
-    flex-direction: column;
     margin-left: 12px;
     margin-right: 12px;
     align-items: center; }
@@ -1974,8 +2042,12 @@ label.form-error {
     margin-right: -12px; }
   .sport-pagination {
     height: 21px;
-    margin-right: 0;
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 27px; }
+  .sport-name {
+    width: 100%;
+    text-align: center; }
   .block {
     padding-top: 58px;
     padding-bottom: 31px;
@@ -1992,6 +2064,7 @@ label.form-error {
     margin-bottom: 17px; } }
 
 .marketing {
+  padding-top: 90px;
   padding-bottom: 403px; }
   .marketing-title {
     margin-bottom: 130px; }
@@ -2032,7 +2105,7 @@ label.form-error {
     display: block; }
   .marketing-name {
     display: block;
-    max-width: 306px;
+    max-width: 293px;
     min-height: 64px;
     margin-left: auto;
     margin-right: auto;
@@ -2102,7 +2175,7 @@ label.form-error {
     width: 188px; }
 
 .partner {
-  margin-bottom: 119px; }
+  margin-bottom: 113px; }
   .partner-info {
     max-width: 350px;
     margin-bottom: 80px;
@@ -2186,25 +2259,29 @@ label.form-error {
       .marketing-block:after {
         width: 274px;
         height: 200px;
-        left: 60px;
-        transform: translate(0, -50%); }
+        left: 50%;
+        transform: translate(-50%, -50%); }
     .marketing-box {
       width: 50%; }
     .marketing-img {
-      max-height: 200px; }
+      max-height: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      transform: translate(-54px, 0); }
     .marketing-list-item_promo {
       margin-bottom: 62px; }
     .marketing-list-item_promo .marketing-img {
       top: 45px; }
     .marketing-list-item_photo .marketing-img {
       margin-top: 0;
-      max-height: 342px; }
+      max-height: 342px;
+      transform: translate(-20px, 0); }
     .marketing-list-item_photo .marketing-block {
       justify-content: center; }
     .marketing-list-item_education .marketing-img {
       max-height: 300px;
       margin-top: 3px;
-      margin-left: 17px; }
+      margin-left: auto; }
     .marketing-name {
       min-height: auto; }
     .marketing-info-content {
@@ -2242,9 +2319,12 @@ label.form-error {
     justify-content: center; }
     .marketing-block:after {
       width: 100%;
-      height: 180px;
-      left: 0;
-      transform: translate(0, -50%); }
+      max-width: 424px;
+      height: 180px; }
+  .marketing-img {
+    transform: translate(0, 0); }
+  .marketing-list-item_photo .marketing-img {
+    transform: translate(0, 0); }
   .marketing-box {
     width: 100%; }
   .marketing-name {
@@ -2261,11 +2341,13 @@ label.form-error {
     .partner-title {
       margin-bottom: 9px; }
     .partner-button {
-      margin-top: 9px; } }
+      margin-top: 9px; }
+    .partner-input {
+      max-width: none; } }
 
 .clients-info {
   max-width: 350px;
-  margin-bottom: 57px;
+  margin-bottom: 60px;
   margin-left: 69px;
   font-weight: 300;
   font-size: 20px;

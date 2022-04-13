@@ -102,7 +102,8 @@
     }
 }
 
-.fancybox-button[disabled] {
+.fancybox-button[disabled],
+.fancybox-button.disabled {
     visibility: hidden;
 }
 
@@ -161,7 +162,7 @@
         display: block;
         position: relative;
         margin-bottom: 11px;
-        padding-left: 50px;
+        padding-left: 55px;
         color: #fff;
         font-weight: 900;
         font-size: 40px;
@@ -172,7 +173,7 @@
             content: '';
             position: absolute;
             top: 12px;
-            left: 0;
+            left: 7px;
             width: 9px;
             height: 73px;
             background-color: #3C9FFA;
@@ -224,7 +225,7 @@
 .сonfidential {
     &-title {
         margin-bottom: 68px;
-        margin-left: -50px;
+        margin-left: -55px;
     }
     &-container {
         max-width: 1076px;
@@ -353,7 +354,7 @@ and (max-width: $mobile){
     &-gallery {
         float: left;
         width: 50%;
-        padding-right: 24px;
+        padding-right: 77px;
     }
     &-detail {
         float: right;
@@ -364,7 +365,7 @@ and (max-width: $mobile){
         width: 50%;
     }
     &-title {
-        margin-left: -50px;
+        margin-left: -55px;
         color: #004161;
         span {
             text-transform: none;
@@ -374,8 +375,9 @@ and (max-width: $mobile){
         max-width: 416px;
     }
     &-content {
+        margin-bottom: 70px;
         ul {
-            margin-top: 45px;
+            margin-top: 50px;
         }
     }
     &-price {
@@ -404,6 +406,9 @@ and (max-width: $mobile){
         margin-top: -3px;
         margin-left: -14px;
     }
+    &-gallery-main-item {
+        margin-right: 48px;
+    }
     &-gallery-link {
         display: block;
     }
@@ -418,6 +423,7 @@ and (max-width: $mobile){
     &-thumbs-item {
         width: 60px;
         height: 60px;
+        margin-right: 10px;
     }
     &-thumbs-img {
         display: block;
@@ -474,6 +480,23 @@ and (max-width: $mobile){
     &-close-link {
         min-width: 204px;
     }
+    &-message {
+        margin-bottom: 25px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    &-message-title {
+        font-weight: 900;
+        font-size: 25px;
+        line-height: 29px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+    &-message-text {
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 27px;
+    }
 
     &_dark {
         background-color: #293C4E;
@@ -501,6 +524,9 @@ and (max-width: $mobile){
             border: 2px solid #fff;
         }
     }
+    &_dark &-gallery-wrapper {
+        max-width: none;
+    }
 }
 
 @media screen
@@ -513,6 +539,7 @@ and (max-width: $desktop){
             max-width: 920px;
         }
         &-content {
+            margin-bottom: 35px;
             ul {
                 margin-top: 15px;
             }
@@ -551,8 +578,8 @@ and (max-width: $tablet){
             margin-left: 0;
             padding-left: 37px;
         }
-        &-gallery-wrapper {
-            max-width: 336px;
+        &-gallery {
+            padding-right: 10px;
         }
         &-content {
             font-size: 18px;
@@ -578,6 +605,9 @@ and (max-width: $mobile){
             display: flex;
             flex-direction: column;
         }
+        &-gallery-main-item {
+            margin-right: 24px;
+        }
         &-gallery {
             float: none;
             width: 100%;
@@ -598,7 +628,7 @@ and (max-width: $mobile){
         }
         &-gallery-main {
             overflow: visible;
-            margin-right: 70px;
+            margin-right: 50px;
         }
         &-text {
             margin-bottom: 52px;

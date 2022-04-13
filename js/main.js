@@ -236,7 +236,7 @@ function initSliderCategory() {
         var isStart = sliderLength > 1 ? true : false;
 
         sliderCategory = new Swiper($slider[0], {
-            loop: isStart,
+            loop: false,
             pagination: false,
             navigation: false,
             spaceBetween: 0,
@@ -248,21 +248,20 @@ function initSliderCategory() {
                 744: {
                     slidesPerView: 2,
                     simulateTouch: false,
-                    loop: sliderLength > 2 ? true : false,
                 },
                 984: {
                     slidesPerView: 2,
                     simulateTouch: false,
-                    loop: sliderLength > 2 ? true : false,
                 },
                 1164: {
                     slidesPerView: 3,
                     simulateTouch: false,
-                    loop: sliderLength > 3 ? true : false,
                 },
                 1344: {
                     slidesPerView: 5,
-                    loop: sliderLength > 5 ? true : false,
+                },
+                1800: {
+                    slidesPerView: 5,
                 },
             },
             on: {
@@ -337,7 +336,7 @@ function initSliderClients() {
         var isStart = sliderLength > 1 ? true : false;
 
         sliderClients = new Swiper($slider[0], {
-            loop: isStart,
+            loop: false,
             pagination: false,
             navigation: false,
             spaceBetween: 24,
@@ -349,21 +348,20 @@ function initSliderClients() {
                 744: {
                     slidesPerView: 2,
                     simulateTouch: false,
-                    loop: sliderLength > 2 ? true : false,
                 },
                 984: {
                     slidesPerView: 3,
                     simulateTouch: false,
-                    loop: sliderLength > 3 ? true : false,
                 },
                 1164: {
                     slidesPerView: 3,
                     simulateTouch: false,
-                    loop: sliderLength > 3 ? true : false,
                 },
                 1344: {
                     slidesPerView: 5,
-                    loop: sliderLength > 5 ? true : false,
+                },
+                1800: {
+                    slidesPerView: 5,
                 },
             },
             on: {
@@ -408,8 +406,8 @@ function initScrollTop() {
     });
 }
 
-function initNumerator() {
-    jQuery('.js-numerator-item').each(function() {
+function initNumerator1() {
+    jQuery('.js-numerator-item-1').each(function() {
         var $element = $(this),
             $parent = $(this).closest('.js-numerator'),
             $value = $element.find('.js-numerator-value'),
@@ -469,13 +467,13 @@ function initNumerator2() {
 function initAnimateSection() {
     var wow = new WOW(
         {
-            boxClass:     'js-animate-section',
+            boxClass:     'js-animate-section-1',
             animateClass: 'animated',
             offset:       200,
             mobile:       true,
             live:         true,
             callback:     function(box) {
-                initNumerator();
+                initNumerator1();
             },
             scrollContainer: null,
         }
@@ -512,22 +510,24 @@ function initAnchorScroll() {
 }
 
 function initGalleryCard() {
-    var galleryThumbs = new Swiper(".js-gallery-card-thumbs", {
-        loop: false,
-        centeredSlides: false,
-        centeredSlidesBounds: false,
-        direction: "horizontal",
-        spaceBetween: 10,
-        slidesPerView: "auto",
-        autoHeight: false,
-        freeMode: false,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        watchOverflow: true,
-        navigation: false,
-        breakpoints: {
-        }
-    });
+    var galleryThumbs = document.querySelector(".js-gallery-card-thumbs");
+    if (galleryThumbs) {
+        galleryThumbs = new Swiper(".js-gallery-card-thumbs", {
+            loop: false,
+            centeredSlides: false,
+            centeredSlidesBounds: false,
+            direction: "horizontal",
+            spaceBetween: 10,
+            slidesPerView: "auto",
+            autoHeight: false,
+            freeMode: false,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            watchOverflow: true,
+            navigation: false,
+            breakpoints: {}
+        });
+    }
     var galleryTop = new Swiper(".js-gallery-card-main", {
         loop: false,
         direction: "horizontal",
@@ -537,7 +537,7 @@ function initGalleryCard() {
         },
         pagination: false,
         thumbs: {
-            swiper: galleryThumbs
+            swiper: galleryThumbs,
         },
         breakpoints: {
             0: {
@@ -570,6 +570,7 @@ function initPopupGallery() {
                 "</button>",
         },
         arrows: false,
+        touch: false,
         lang: "ru",
         i18n: {
             ru: {
@@ -580,7 +581,7 @@ function initPopupGallery() {
         },
         afterLoad: function(instance, current) {
             if ( instance.group.length > 1 && current.$content ) {
-                $('.card-container').append('' +
+                $('.js-popup-gallery-container').append('' +
                     '<div class="card-popup-buttons">' +
                     '<button class="card-popup-button card-popup-button_left fancybox-button fancybox-button--arrow_left prev" data-fancybox-prev>' +
                     '<i class="fancybox-button-icon fancybox-button-icon_left"><i class="icon icon_arrow-left"></i></i>' +
@@ -590,14 +591,20 @@ function initPopupGallery() {
                     '</button>' +
                     '</div>'
                 );
+                if (current.index == 0) {
+                    $('.fancybox-button--arrow_left').addClass('disabled');
+                }
+                if (current.index >= instance.group.length - 1) {
+                    $('.fancybox-button--arrow_right').addClass('disabled');
+                }
             }
         },
         afterShow: function (data) {
             initValidate(data.$refs.container.find('.js-form-validate'));
             initMask();
-            initScroll();
             initGalleryCard();
             initPopupClose();
+            initPopupConfidential();
         },
     });
 }

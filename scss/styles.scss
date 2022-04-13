@@ -561,7 +561,7 @@ blockquote {
 	visibility: hidden;
 	position: fixed;
 	z-index: 100;
-	bottom: 55px;
+	bottom: 40px;
 	right: 25px;
 	width: 64px;
 	height: 64px;
@@ -721,6 +721,7 @@ blockquote {
 	}
 	span {
 		font-weight: 300;
+		letter-spacing: normal;
 	}
 }
 
@@ -807,10 +808,19 @@ and (max-width: $tablet){
 and (max-width: $mobile){
 	.title {
 		margin-bottom: 28px;
+		font-size: 30px;
+		line-height: 40px;
+		&:before {
+			top: 9px;
+			height: 60px;
+		}
 	}
 	.slider {
 		&-nav {
 			display: none;
 		}
+	}
+	.button-up {
+		right: 7px;
 	}
 }
