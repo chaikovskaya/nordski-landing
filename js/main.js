@@ -258,7 +258,7 @@ function initSliderCategory() {
                     simulateTouch: false,
                 },
                 1344: {
-                    slidesPerView: 5,
+                    slidesPerView: 4,
                 },
                 1800: {
                     slidesPerView: 5,
@@ -358,7 +358,7 @@ function initSliderClients() {
                     simulateTouch: false,
                 },
                 1344: {
-                    slidesPerView: 5,
+                    slidesPerView: 4,
                 },
                 1800: {
                     slidesPerView: 5,
@@ -571,6 +571,7 @@ function initPopupGallery() {
         },
         arrows: false,
         touch: false,
+        infobar : false,
         lang: "ru",
         i18n: {
             ru: {
