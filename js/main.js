@@ -243,25 +243,31 @@ function initSliderCategory() {
             breakpoints: {
                 0: {
                     slidesPerView: 1,
+                    loop: sliderLength > 1 ? true : false,
                     simulateTouch: false,
                 },
                 744: {
                     slidesPerView: 2,
+                    loop: sliderLength > 2 ? true : false,
                     simulateTouch: false,
                 },
                 984: {
                     slidesPerView: 2,
+                    loop: sliderLength > 2 ? true : false,
                     simulateTouch: false,
                 },
                 1164: {
                     slidesPerView: 3,
+                    loop: sliderLength > 3 ? true : false,
                     simulateTouch: false,
                 },
                 1344: {
-                    slidesPerView: 4,
+                    slidesPerView: 5,
+                    loop: sliderLength > 4 ? true : false,
                 },
                 1800: {
                     slidesPerView: 5,
+                    loop: sliderLength > 5 ? true : false,
                 },
             },
             on: {
@@ -343,25 +349,31 @@ function initSliderClients() {
             breakpoints: {
                 0: {
                     slidesPerView: 1,
+                    loop: sliderLength > 1 ? true : false,
                     simulateTouch: false,
                 },
                 744: {
                     slidesPerView: 2,
+                    loop: sliderLength > 2 ? true : false,
                     simulateTouch: false,
                 },
                 984: {
                     slidesPerView: 3,
+                    loop: sliderLength > 3 ? true : false,
                     simulateTouch: false,
                 },
                 1164: {
                     slidesPerView: 3,
+                    loop: sliderLength > 3 ? true : false,
                     simulateTouch: false,
                 },
                 1344: {
-                    slidesPerView: 4,
+                    slidesPerView: 5,
+                    loop: sliderLength > 4 ? true : false,
                 },
                 1800: {
                     slidesPerView: 5,
+                    loop: sliderLength > 5 ? true : false,
                 },
             },
             on: {
@@ -501,7 +513,7 @@ function initAnimateSection2() {
 function initAnchorScroll() {
     var $page = $('html, body');
 
-    $('a[href*="#"]').click(function() {
+    $('.js-anchor-link[href*="#"]').click(function() {
         $page.animate({
             scrollTop: $($.attr(this, 'href')).offset().top
         }, 500);
@@ -572,6 +584,7 @@ function initPopupGallery() {
         arrows: false,
         touch: false,
         infobar : false,
+        loop: true,
         lang: "ru",
         i18n: {
             ru: {

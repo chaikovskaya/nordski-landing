@@ -361,7 +361,7 @@ and (max-width: $mobile){
         color: #1F4466;
     }
     &-slider {
-        overflow: hidden;
+        overflow: visible;
         margin-left: -260px;
         margin-right: -260px;
     }
@@ -534,13 +534,6 @@ and (max-width: $mobile){
 
 @media screen
 and (max-width: 1800px){
-    .category {
-        &-slider {
-            margin-left: 0;
-            margin-right: 0;
-            overflow: visible;
-        }
-    }
 }
 
 @media screen
@@ -1103,7 +1096,7 @@ and (max-width: $mobile){
         }
     }
     &-slider {
-        overflow: hidden;
+        overflow: visible;
         margin-left: -285px;
         margin-right: -285px;
     }
@@ -1129,13 +1122,6 @@ and (max-width: $mobile){
 
 @media screen
 and (max-width: 1800px){
-    .clients {
-        &-slider {
-            margin-left: 0;
-            margin-right: 0;
-            overflow: visible;
-        }
-    }
 }
 
 @media screen
