@@ -1871,15 +1871,23 @@ label.form-error {
   .sport-block {
     position: relative;
     display: flex;
-    margin-bottom: 25px;
-    background: linear-gradient(90deg, #3C9FFA 70%, transparent 30%); }
+    margin-bottom: 25px; }
+    .sport-block:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 49.94%;
+      width: 1px;
+      height: 100%;
+      background-color: #3C9FFA;
+      transform: skew(165.1deg); }
   .sport-block-item {
     overflow: hidden; }
     .sport-block-item:nth-child(1) {
       margin-right: -15%;
-      clip-path: polygon(0 0, 100% 0, 74.5% 100%, 0% 100%); }
+      clip-path: polygon(0 0, 100% 0, 73.8% 100%, 0% 100%); }
     .sport-block-item:nth-child(2) {
-      clip-path: polygon(27% 0, 100% 0, 100% 100%, 0% 100%); }
+      clip-path: polygon(26.2% 0, 100% 0, 100% 100%, 0% 100%); }
   .sport-img {
     display: block;
     width: 100%; }
