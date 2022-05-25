@@ -347,10 +347,20 @@ and (max-width: $mobile){
             box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.25);
         }
     }
+    &-block {
+        display: block;
+        position: relative;
+    }
     &-img {
         display: block;
         width: 100%;
         margin-bottom: 19px;
+    }
+    &-icon {
+        display: none;
+        position: absolute;
+        right: 7px;
+        bottom: 9px;
     }
     &-name {
         display: block;
@@ -366,6 +376,9 @@ and (max-width: $mobile){
         margin-right: -260px;
     }
     &-list {
+    }
+    &-pagination {
+        display: none;
     }
 }
 
@@ -614,6 +627,18 @@ and (max-width: $notebook){
 and (max-width: $tablet){
     .category {
         margin-bottom: 65px;
+        &-list {
+            margin-bottom: 25px;
+        }
+        &-pagination {
+            display: block;
+            width: auto!important;
+            margin-left: $gutters;
+            margin-right: -88px;
+        }
+        &-icon {
+            display: block;
+        }
     }
     .sport {
         &-pagination {
@@ -640,6 +665,10 @@ and (max-width: $tablet){
 and (max-width: $mobile){
     .category {
         margin-bottom: 42px;
+        &-pagination {
+            margin-left: 0;
+            margin-right: -$gutters;
+        }
         &-slider {
             margin-left: 0;
             margin-right: 24px;
@@ -1158,6 +1187,13 @@ and (max-width: $tablet){
         }
         &-slider {
             margin-right: 105px;
+        }
+        &-list {
+            margin-bottom: 30px;
+        }
+        &-pagination {
+            margin-right: -105px;
+            width: auto!important;
         }
     }
 }

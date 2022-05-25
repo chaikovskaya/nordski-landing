@@ -377,6 +377,24 @@ blockquote {
 	margin-left: 2.5px;
 	margin-right: 2.5px;
 }
+
+.pagination-simple {
+	display: none;
+	line-height: 0;
+	text-align: center;
+}
+.pagination-simple > .swiper-pagination-bullet {
+	width: 8px;
+	height: 8px;
+	margin-left: 4px!important;
+	margin-right: 4px!important;
+	border-radius: 50%;
+	background-color: #9A9A9A;
+}
+.pagination-simple .swiper-pagination-bullet-active {
+	height: 8px;
+	background-color: #3C9FFA;
+}
 /* /swiper */
 
 /* slider */
@@ -697,6 +715,11 @@ blockquote {
 			background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.7128 12.6508L24.5072 2.85635L22.4452 0.79437L12.6508 10.5888L2.85647 0.794412L0.79449 2.85639L10.5889 12.6508L0.79449 22.4451L2.85647 24.5071L12.6508 14.7127L22.4452 24.5071L24.5072 22.4452L14.7128 12.6508Z' fill='%23FF6B00'/%3E%3C/svg%3E");
 		}
 	}
+	&_click {
+		width: 32px;
+		height: 32px;
+		background-image: url("../images/icons/click-icon.png");
+	}
 }
 
 
@@ -801,6 +824,9 @@ and (max-width: $tablet){
 			top: 10px;
 			height: 74px;
 		}
+	}
+	.pagination-simple {
+		display: block;
 	}
 }
 
