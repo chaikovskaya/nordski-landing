@@ -237,9 +237,16 @@ function initSliderCategory() {
 
         sliderCategory = new Swiper($slider[0], {
             loop: false,
-            pagination: false,
+            pagination: {
+                el: ".js-slider-category-pagination",
+                clickable: true,
+            },
             navigation: false,
             spaceBetween: 0,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
             breakpoints: {
                 0: {
                     slidesPerView: 1,
@@ -343,9 +350,12 @@ function initSliderClients() {
 
         sliderClients = new Swiper($slider[0], {
             loop: false,
-            pagination: false,
             navigation: false,
             spaceBetween: 24,
+            pagination: {
+                el: ".js-slider-clients-pagination",
+                clickable: true,
+            },
             breakpoints: {
                 0: {
                     slidesPerView: 1,
