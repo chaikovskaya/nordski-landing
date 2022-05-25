@@ -374,6 +374,23 @@ blockquote {
   margin-left: 2.5px;
   margin-right: 2.5px; }
 
+.pagination-simple {
+  display: none;
+  line-height: 0;
+  text-align: center; }
+
+.pagination-simple > .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  margin-left: 4px !important;
+  margin-right: 4px !important;
+  border-radius: 50%;
+  background-color: #9A9A9A; }
+
+.pagination-simple .swiper-pagination-bullet-active {
+  height: 8px;
+  background-color: #3C9FFA; }
+
 /* /swiper */
 /* slider */
 .slider-head {
@@ -628,6 +645,10 @@ blockquote {
     transition: background-image 0.3s linear; }
     .icon_close:hover {
       background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.7128 12.6508L24.5072 2.85635L22.4452 0.79437L12.6508 10.5888L2.85647 0.794412L0.79449 2.85639L10.5889 12.6508L0.79449 22.4451L2.85647 24.5071L12.6508 14.7127L22.4452 24.5071L24.5072 22.4452L14.7128 12.6508Z' fill='%23FF6B00'/%3E%3C/svg%3E"); }
+  .icon_click {
+    width: 32px;
+    height: 32px;
+    background-image: url("../images/icons/click-icon.png"); }
 
 .title {
   position: relative;
@@ -705,7 +726,9 @@ blockquote {
     line-height: 47px; }
     .title:before {
       top: 10px;
-      height: 74px; } }
+      height: 74px; }
+  .pagination-simple {
+    display: block; } }
 
 @media screen and (max-width: 744px) {
   .title {
@@ -1822,6 +1845,12 @@ label.form-error {
     .advantages-currency {
       font-size: 42px; } }
 
+@keyframes animation-icon-click {
+  0%, 50% {
+    fill: #000; }
+  51%, 100% {
+    fill: #3C9FFA; } }
+
 .category {
   margin-bottom: 157px; }
   .category-link {
@@ -1831,10 +1860,24 @@ label.form-error {
     .category-link:hover {
       background-color: #fff;
       box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.25); }
+  .category-block {
+    display: block;
+    position: relative; }
   .category-img {
     display: block;
     width: 100%;
     margin-bottom: 19px; }
+  .category-icon {
+    display: none;
+    position: absolute;
+    right: 7px;
+    bottom: 9px;
+    width: 32px;
+    height: 32px; }
+    .category-icon svg {
+      fill: #000;
+      transition: fill 0.5s linear;
+      animation: animation-icon-click 1s linear infinite; }
   .category-name {
     display: block;
     text-align: center;
@@ -1846,6 +1889,8 @@ label.form-error {
     overflow: visible;
     margin-left: -260px;
     margin-right: -260px; }
+  .category-pagination {
+    display: none; }
 
 .block {
   padding-top: 57px;
@@ -1910,7 +1955,7 @@ label.form-error {
     margin-top: -30px; }
   .sport-pagination {
     position: static;
-    min-width: 32px;
+    min-width: 96px;
     width: auto !important;
     height: 28px;
     margin-right: 80px; }
@@ -2020,6 +2065,15 @@ label.form-error {
 @media screen and (max-width: 984px) {
   .category {
     margin-bottom: 65px; }
+    .category-list {
+      margin-bottom: 25px; }
+    .category-pagination {
+      display: block;
+      width: auto !important;
+      margin-left: 24px;
+      margin-right: -88px; }
+    .category-icon {
+      display: block; }
   .sport-pagination {
     margin-right: 34px; }
   .partners {
@@ -2034,6 +2088,9 @@ label.form-error {
 @media screen and (max-width: 744px) {
   .category {
     margin-bottom: 42px; }
+    .category-pagination {
+      margin-left: 0;
+      margin-right: -24px; }
     .category-slider {
       margin-left: 0;
       margin-right: 24px; }
@@ -2048,7 +2105,8 @@ label.form-error {
     height: 21px;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 27px; }
+    margin-bottom: 27px;
+    justify-content: center; }
   .sport-name {
     width: 100%;
     text-align: center; }
@@ -2405,7 +2463,12 @@ label.form-error {
   .clients-info {
     margin-bottom: 50px; }
   .clients-slider {
-    margin-right: 105px; } }
+    margin-right: 105px; }
+  .clients-list {
+    margin-bottom: 30px; }
+  .clients-pagination {
+    margin-right: -105px;
+    width: auto !important; } }
 
 @media screen and (max-width: 744px) {
   .clients-title {

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4c549810-24c5-46f0-ade9-3625d9a185cd" name="Default Changelist" comment="add pagin">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/nordski-landing.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/icons/click-icon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="main" />
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="main" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="12694" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="27KnrV8JVyHpDs461oK1wIc9KiQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/../../node_modules/gulp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="default" type="js.build_tools.gulp" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
+      <tasks>
+        <task>default</task>
+      </tasks>
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gulp.js.default" />
+        <item itemvalue="Gulp.js.default" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c549810-24c5-46f0-ade9-3625d9a185cd" name="Default Changelist" comment="" />
+      <created>1649077844297</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649077844297</updated>
+      <workItem from="1649077845446" duration="4010000" />
+      <workItem from="1649138239358" duration="24480000" />
+      <workItem from="1649224353840" duration="28718000" />
+      <workItem from="1649308872126" duration="26990000" />
+      <workItem from="1649396353110" duration="25669000" />
+      <workItem from="1649656470422" duration="27081000" />
+      <workItem from="1649742017925" duration="28011000" />
+      <workItem from="1649828286865" duration="7817000" />
+      <workItem from="1649916806801" duration="2025000" />
+      <workItem from="1652256221824" duration="6695000" />
+      <workItem from="1653465342919" duration="8045000" />
+      <workItem from="1653478145912" duration="2850000" />
+      <workItem from="1653483057902" duration="257000" />
+      <workItem from="1653547392855" duration="10000" />
+    </task>
+    <task id="LOCAL-00001" summary="add pagin">
+      <created>1653475546952</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653475546952</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add pagin" />
+    <option name="LAST_COMMIT_MESSAGE" value="add pagin" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="872" y="178" key="#Deployment" timestamp="1652264285338">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="872" y="178" key="#Deployment/-1920.0.1536.832/0.0.2560.1040@0.0.2560.1040" timestamp="1652264285338" />
+    <state x="1038" y="216" key="#SCSS" timestamp="1649158865422">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1038" y="216" key="#SCSS/-1920.0.1536.832/0.0.2560.1040@0.0.2560.1040" timestamp="1649158865422" />
+    <state x="1060" y="275" key="FileChooserDialogImpl" timestamp="1653483316478">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1060" y="275" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.2560.1040@0.0.2560.1040" timestamp="1653483316478" />
+    <state width="1258" height="38" key="GridCell.Tab.0.bottom" timestamp="1653483317489">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1258" height="38" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.2560.1040@0.0.2560.1040" timestamp="1653483317489" />
+    <state width="1258" height="38" key="GridCell.Tab.0.center" timestamp="1653483317489">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1258" height="38" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.2560.1040@0.0.2560.1040" timestamp="1653483317489" />
+    <state width="1258" height="38" key="GridCell.Tab.0.left" timestamp="1653483317488">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1258" height="38" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.2560.1040@0.0.2560.1040" timestamp="1653483317488" />
+    <state width="1258" height="38" key="GridCell.Tab.0.right" timestamp="1653483317489">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1258" height="38" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.2560.1040@0.0.2560.1040" timestamp="1653483317489" />
+    <state x="872" y="253" key="Vcs.Push.Dialog.v2" timestamp="1653475569195">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="872" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.2560.1040@0.0.2560.1040" timestamp="1653475569195" />
+    <state x="1097" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1649400138892">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1097" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1536.832/0.0.2560.1040@0.0.2560.1040" timestamp="1649400138892" />
+    <state x="987" y="253" width="585" height="534" key="find.popup" timestamp="1649917627766">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="987" y="253" width="585" height="534" key="find.popup/-1920.0.1536.832/0.0.2560.1040@0.0.2560.1040" timestamp="1649917627766" />
+  </component>
+</project>
