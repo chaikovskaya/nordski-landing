@@ -244,7 +244,7 @@ function initSliderCategory() {
             navigation: false,
             spaceBetween: 0,
             autoplay: {
-                delay: 5000,
+                delay: 3000,
                 disableOnInteraction: false,
             },
             breakpoints: {

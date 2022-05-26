@@ -334,7 +334,14 @@ and (max-width: $mobile){
     }
 }
 
-
+@keyframes animation-icon-click {
+    0%, 50% {
+        fill: #000;
+    }
+    51%, 100% {
+        fill: #3C9FFA;
+    }
+}
 
 .category {
     margin-bottom: 157px;
@@ -361,6 +368,13 @@ and (max-width: $mobile){
         position: absolute;
         right: 7px;
         bottom: 9px;
+        width: 32px;
+        height: 32px;
+        svg {
+            fill: #000;
+            transition: fill 0.5s linear;
+            animation: animation-icon-click 1s linear infinite;
+        }
     }
     &-name {
         display: block;
